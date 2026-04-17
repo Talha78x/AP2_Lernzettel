@@ -1,0 +1,163 @@
+/AP2 Lernzettel/Themencheckliste_AP2.md
+/AP2 Lernzettel/.DS_Store
+/AP2 Lernzettel/.obsidian/workspace.json
+/AP2 Lernzettel/.obsidian/app.json
+/AP2 Lernzettel/.obsidian/core-plugins.json
+/AP2 Lernzettel/.obsidian/graph.json
+/AP2 Lernzettel/.obsidian/appearance.json
+/AP2 Lernzettel/.obsidian
+/AP2 Lernzettel/02_Notizen/4_Netzwerke_und_Protokolle/VPN (Tunneling, standortübergreifende Kommunikation).md
+/AP2 Lernzettel/02_Notizen/4_Netzwerke_und_Protokolle/TLS & SSL.md
+/AP2 Lernzettel/02_Notizen/4_Netzwerke_und_Protokolle/IPv4 (Grundlagen & Subnetting usw..).md
+/AP2 Lernzettel/02_Notizen/4_Netzwerke_und_Protokolle/NAT & PAT.md
+/AP2 Lernzettel/02_Notizen/4_Netzwerke_und_Protokolle/LAN, WAN, WLAN ....md
+/AP2 Lernzettel/02_Notizen/4_Netzwerke_und_Protokolle/Client-Server und Peer-to-Peer.md
+/AP2 Lernzettel/02_Notizen/4_Netzwerke_und_Protokolle/Standardprotokolle (TCP, UDP, MAC, ARP, ICMP, HTTP, HTTPS, FTP, SMTP...).md
+/AP2 Lernzettel/02_Notizen/4_Netzwerke_und_Protokolle/Netzwerktopologien und Netzwerkpläne.md
+/AP2 Lernzettel/02_Notizen/4_Netzwerke_und_Protokolle/QoS.md
+/AP2 Lernzettel/02_Notizen/4_Netzwerke_und_Protokolle/Spanning Tree.md
+/AP2 Lernzettel/02_Notizen/4_Netzwerke_und_Protokolle/OSI und TCP-IP Modell.md
+/AP2 Lernzettel/02_Notizen/4_Netzwerke_und_Protokolle/IPv6 (Grundlagen & Subnetting usw..).md
+/AP2 Lernzettel/02_Notizen/4_Netzwerke_und_Protokolle/First-Hop Redundancy Protocol (FHRP).md
+/AP2 Lernzettel/02_Notizen/4_Netzwerke_und_Protokolle/Strukturierte Verkabelung (Kupfer, Glasfaser, Funk, WLAN und Bluetooth).md
+/AP2 Lernzettel/02_Notizen/4_Netzwerke_und_Protokolle/VLAN (Arten, Trunking ...).md
+/AP2 Lernzettel/02_Notizen/4_Netzwerke_und_Protokolle
+/AP2 Lernzettel/02_Notizen/16_WiSo_Arbeitsschutz_und_Gesundheit/Vorsorgeuntersuchungen und Aufgaben der Sicherheitsbeauftragten.md
+/AP2 Lernzettel/02_Notizen/16_WiSo_Arbeitsschutz_und_Gesundheit/Brandursachen, Brandschutzordnung, Feuerlöscher, Löschdecken und Brandklassen.md
+/AP2 Lernzettel/02_Notizen/16_WiSo_Arbeitsschutz_und_Gesundheit/Grundlagen der IT-Sicherheit im beruflichen Alltag.md
+/AP2 Lernzettel/02_Notizen/16_WiSo_Arbeitsschutz_und_Gesundheit/Arbeitsschutzgesetz, Arbeitsstättenverordnung, Betriebssicherheitsverordnung und Unfallverhütungsvorschriften..md
+/AP2 Lernzettel/02_Notizen/16_WiSo_Arbeitsschutz_und_Gesundheit/Verhaltensregeln am Arbeitsplatz, Fluchtwege, Notausgänge und Kennzeichnungen.md
+/AP2 Lernzettel/02_Notizen/16_WiSo_Arbeitsschutz_und_Gesundheit/Ergonomie, Bildschirmarbeitsplatz, Gefährdungen und Beanspruchungen.md
+/AP2 Lernzettel/02_Notizen/16_WiSo_Arbeitsschutz_und_Gesundheit/Verhaltensregeln am Arbeitsplatz, Fluchtwege, Notausgänge und Kennzeichnungen..md
+/AP2 Lernzettel/02_Notizen/16_WiSo_Arbeitsschutz_und_Gesundheit
+/AP2 Lernzettel/02_Notizen/1_Software_und_Programmierung/Programmierparadigmen (prozedural, objektorientiert, funktional, deklarativ).md
+/AP2 Lernzettel/02_Notizen/1_Software_und_Programmierung/Skript- und Shellprogrammierung.md
+/AP2 Lernzettel/02_Notizen/1_Software_und_Programmierung/Softwareergonomie & Barrierefreiheit.md
+/AP2 Lernzettel/02_Notizen/1_Software_und_Programmierung/Mock-Ups.md
+/AP2 Lernzettel/02_Notizen/1_Software_und_Programmierung/Cyber-physische Systeme (Sensoren, Aktoren und Bibliotheken).md
+/AP2 Lernzettel/02_Notizen/1_Software_und_Programmierung/Automatisierung.md
+/AP2 Lernzettel/02_Notizen/1_Software_und_Programmierung/UML Diagramme.md
+/AP2 Lernzettel/02_Notizen/1_Software_und_Programmierung/Pseudocode.md
+/AP2 Lernzettel/02_Notizen/1_Software_und_Programmierung/Algorithmen und Kontrollstrukturen.md
+/AP2 Lernzettel/02_Notizen/1_Software_und_Programmierung/Bildschirmausgabemasken.md
+/AP2 Lernzettel/02_Notizen/1_Software_und_Programmierung/Programmiersprachen.md
+/AP2 Lernzettel/02_Notizen/1_Software_und_Programmierung
+/AP2 Lernzettel/02_Notizen/13_Kaufmännische, rechtliche und kundenbezogene Themen/BGB HGB AGB.md
+/AP2 Lernzettel/02_Notizen/13_Kaufmännische, rechtliche und kundenbezogene Themen/Unlauter Wettbewerb.md
+/AP2 Lernzettel/02_Notizen/13_Kaufmännische, rechtliche und kundenbezogene Themen/Kosten-Nutzen-Betrachtung.md
+/AP2 Lernzettel/02_Notizen/13_Kaufmännische, rechtliche und kundenbezogene Themen/Bildbearbeitung, Präsentationstechniken.md
+/AP2 Lernzettel/02_Notizen/13_Kaufmännische, rechtliche und kundenbezogene Themen/CRM.md
+/AP2 Lernzettel/02_Notizen/13_Kaufmännische, rechtliche und kundenbezogene Themen/Corporate Identity (CI).md
+/AP2 Lernzettel/02_Notizen/13_Kaufmännische, rechtliche und kundenbezogene Themen
+/AP2 Lernzettel/02_Notizen/11_Monitoring_und_Betrieb/SLA.md
+/AP2 Lernzettel/02_Notizen/11_Monitoring_und_Betrieb/1st-Level, 2nd-Level, 3rd-Level-Support.md
+/AP2 Lernzettel/02_Notizen/11_Monitoring_und_Betrieb/Monitoring und SNMP.md
+/AP2 Lernzettel/02_Notizen/11_Monitoring_und_Betrieb/Troubleshooting und Härtungsmaßnahmen.md
+/AP2 Lernzettel/02_Notizen/11_Monitoring_und_Betrieb/SIEM usw...md
+/AP2 Lernzettel/02_Notizen/11_Monitoring_und_Betrieb/Ticketsysteme.md
+/AP2 Lernzettel/02_Notizen/11_Monitoring_und_Betrieb/SOP.md
+/AP2 Lernzettel/02_Notizen/11_Monitoring_und_Betrieb/SMART.md
+/AP2 Lernzettel/02_Notizen/11_Monitoring_und_Betrieb
+/AP2 Lernzettel/02_Notizen/17_WiSo_Umwelt_Zusammenarbeit_und_Lernen/Unternehmenswerte, Ethik, Diversity und Gender-Aspekte.md
+/AP2 Lernzettel/02_Notizen/17_WiSo_Umwelt_Zusammenarbeit_und_Lernen/Nachhaltigkeit, Umweltgesetze und umweltschonende Beschaffung.md
+/AP2 Lernzettel/02_Notizen/17_WiSo_Umwelt_Zusammenarbeit_und_Lernen/Energie- und Ressourcenschonung, Recycling, Abfalltrennung und Entsorgung.md
+/AP2 Lernzettel/02_Notizen/17_WiSo_Umwelt_Zusammenarbeit_und_Lernen/Wertschätzende Zusammenarbeit, Interdisziplinarität und Interkulturalität.md
+/AP2 Lernzettel/02_Notizen/17_WiSo_Umwelt_Zusammenarbeit_und_Lernen/Weiterbildung, Umschulung, Fördermaßnahmen, Karriereplanung und Existenzgründung.md
+/AP2 Lernzettel/02_Notizen/17_WiSo_Umwelt_Zusammenarbeit_und_Lernen
+/AP2 Lernzettel/02_Notizen/12_Projekt/Netzplan.md
+/AP2 Lernzettel/02_Notizen/12_Projekt/Scrum, Agile Methoden, ISO, ITIL.md
+/AP2 Lernzettel/02_Notizen/12_Projekt/Was macht ein Projekt aus?.md
+/AP2 Lernzettel/02_Notizen/12_Projekt/Meilensteine.md
+/AP2 Lernzettel/02_Notizen/12_Projekt/Vorgehnsmodelle (Wasserfall, V-Modell, Spiralmodell, Prototyping, Scrum, Kanban ...).md
+/AP2 Lernzettel/02_Notizen/12_Projekt/Ressourcenplanung.md
+/AP2 Lernzettel/02_Notizen/12_Projekt/Lastenheft.md
+/AP2 Lernzettel/02_Notizen/12_Projekt/Projektplan.md
+/AP2 Lernzettel/02_Notizen/12_Projekt/Gantt-Diagramm.md
+/AP2 Lernzettel/02_Notizen/12_Projekt/Abschlussbericht.md
+/AP2 Lernzettel/02_Notizen/12_Projekt/Projektcontrolling.md
+/AP2 Lernzettel/02_Notizen/12_Projekt/Pflichtenheft.md
+/AP2 Lernzettel/02_Notizen/12_Projekt
+/AP2 Lernzettel/02_Notizen/5_Netzwerkkomponenten_und_Dienste/Dateifreigaben und Datenabruf, z. B. SMB, CIFS und ODBC.md
+/AP2 Lernzettel/02_Notizen/5_Netzwerkkomponenten_und_Dienste/Routing (statisch, dynamisch, Inter-VLAN, Protokolle wie OSPF, RIP, BGP).md
+/AP2 Lernzettel/02_Notizen/5_Netzwerkkomponenten_und_Dienste/Firewall (IDS, IPS, DMZ, ACL, Filtertabelle).md
+/AP2 Lernzettel/02_Notizen/5_Netzwerkkomponenten_und_Dienste/Netzwerkkomponenten.md
+/AP2 Lernzettel/02_Notizen/5_Netzwerkkomponenten_und_Dienste/Load Balancing.md
+/AP2 Lernzettel/02_Notizen/5_Netzwerkkomponenten_und_Dienste/Netzwerkrelevante Dienste (DHCP, DNS, NTP, SNMP...).md
+/AP2 Lernzettel/02_Notizen/5_Netzwerkkomponenten_und_Dienste
+/AP2 Lernzettel/02_Notizen/7_Sicherheit_und_Datenschutz/Schutzbedafsanalyse und Riskoanalyse.md
+/AP2 Lernzettel/02_Notizen/7_Sicherheit_und_Datenschutz/Zutritts-, Zugangs- und Zugriffskontrolle.md
+/AP2 Lernzettel/02_Notizen/7_Sicherheit_und_Datenschutz/Schutzziele der IT.md
+/AP2 Lernzettel/02_Notizen/7_Sicherheit_und_Datenschutz/Security by Design.md
+/AP2 Lernzettel/02_Notizen/7_Sicherheit_und_Datenschutz/DSGVO und IT-Grundschutz (Personbezogene Daten usw..).md
+/AP2 Lernzettel/02_Notizen/7_Sicherheit_und_Datenschutz/TOM.md
+/AP2 Lernzettel/02_Notizen/7_Sicherheit_und_Datenschutz
+/AP2 Lernzettel/02_Notizen/6_IT_Systeme_und_Infrastruktur/Anforderungen an Bandbreite, Latenz, Verfügbarkeit, Übertragungsmedien und Netzwerksicherheit.md
+/AP2 Lernzettel/02_Notizen/6_IT_Systeme_und_Infrastruktur/Server und Storage.md
+/AP2 Lernzettel/02_Notizen/6_IT_Systeme_und_Infrastruktur/On-Premises, Cloud, Housing, Hosting sowie IaaS, PaaS und SaaS.md
+/AP2 Lernzettel/02_Notizen/6_IT_Systeme_und_Infrastruktur/Virtualisierung (Bare-Metal, Hypervisor, Container).md
+/AP2 Lernzettel/02_Notizen/6_IT_Systeme_und_Infrastruktur/Deploymentstrategien.md
+/AP2 Lernzettel/02_Notizen/6_IT_Systeme_und_Infrastruktur/Betriebssysteme und Anwendungen.md
+/AP2 Lernzettel/02_Notizen/6_IT_Systeme_und_Infrastruktur/2-Tier-, 3-Tier- und Multi-Tier-Architekturen.md
+/AP2 Lernzettel/02_Notizen/6_IT_Systeme_und_Infrastruktur/Befehlezeilenkomandos (ping, tracert, nslookup, ipconfig, ifconfig, netstat, nmap, tcpdump, dig ...).md
+/AP2 Lernzettel/02_Notizen/6_IT_Systeme_und_Infrastruktur
+/AP2 Lernzettel/02_Notizen/14_WiSo_Berufsbildung_und_Arbeitsrecht/Arbeitszeitgesetz, Jugendarbeitsschutzgesetz, Mutterschutzgesetz, AGG, Betriebsverfassungsgesetz und Sozialversicherung.md
+/AP2 Lernzettel/02_Notizen/14_WiSo_Berufsbildung_und_Arbeitsrecht/BRechte und Pflichten von Auszubildenden und Ausbildenden.md
+/AP2 Lernzettel/02_Notizen/14_WiSo_Berufsbildung_und_Arbeitsrecht/Duales System, Aufgaben von Ausbildungsbetrieb, Berufsschule und Kammern.md
+/AP2 Lernzettel/02_Notizen/14_WiSo_Berufsbildung_und_Arbeitsrecht/Ausbildungsvertrag, Probezeit, Vergütung, Urlaub, Kündigung und Prüfungen.md
+/AP2 Lernzettel/02_Notizen/14_WiSo_Berufsbildung_und_Arbeitsrecht/Individual- und Kollektivarbeitsrecht.md
+/AP2 Lernzettel/02_Notizen/14_WiSo_Berufsbildung_und_Arbeitsrecht/Lohn- und Gehaltsformen, Brutto & Netto, Steuern und Sozialabgaben.md
+/AP2 Lernzettel/02_Notizen/14_WiSo_Berufsbildung_und_Arbeitsrecht/Tarifrecht, Tarifverträge, Tarifautonomie, Tarifbindung, Schlichtung und Arbeitskampf.md
+/AP2 Lernzettel/02_Notizen/14_WiSo_Berufsbildung_und_Arbeitsrecht
+/AP2 Lernzettel/02_Notizen/3_Tests_und_Qualitaetssicherung/TDD, PDCA, KVP, Kennzahlen und Soll-Ist-Vergleich.md
+/AP2 Lernzettel/02_Notizen/3_Tests_und_Qualitaetssicherung/Testvarianten (Unit-Tests, Integrationstests, Systemtests...).md
+/AP2 Lernzettel/02_Notizen/3_Tests_und_Qualitaetssicherung/Versionsmanagement (GIT, Repos) des Quellcodes.md
+/AP2 Lernzettel/02_Notizen/3_Tests_und_Qualitaetssicherung/Statische und dynamischen Testverfahren.md
+/AP2 Lernzettel/02_Notizen/3_Tests_und_Qualitaetssicherung/Debugging.md
+/AP2 Lernzettel/02_Notizen/3_Tests_und_Qualitaetssicherung
+/AP2 Lernzettel/02_Notizen/9_Benutzer_und_Rechte/RADIUS und AAA.md
+/AP2 Lernzettel/02_Notizen/9_Benutzer_und_Rechte/Mail-Service (MX, A, AAAA..).md
+/AP2 Lernzettel/02_Notizen/9_Benutzer_und_Rechte/Berechtigungskonzepte.md
+/AP2 Lernzettel/02_Notizen/9_Benutzer_und_Rechte/Active Directory und LDAP.md
+/AP2 Lernzettel/02_Notizen/9_Benutzer_und_Rechte/MFA, SSO, Passwortrichlinien.md
+/AP2 Lernzettel/02_Notizen/9_Benutzer_und_Rechte/Domänenkonzepte.md
+/AP2 Lernzettel/02_Notizen/9_Benutzer_und_Rechte/URLs und DNS.md
+/AP2 Lernzettel/02_Notizen/9_Benutzer_und_Rechte
+/AP2 Lernzettel/02_Notizen/8_Bedrohungen_und_Schutz/Zertifikate.md
+/AP2 Lernzettel/02_Notizen/8_Bedrohungen_und_Schutz/Hashverfahren & digitale Signaturen.md
+/AP2 Lernzettel/02_Notizen/8_Bedrohungen_und_Schutz/Verschlüsselung (Arten, Symmetrisch, Asymmetrisch, Hybride).md
+/AP2 Lernzettel/02_Notizen/8_Bedrohungen_und_Schutz/Angriffsarten und Schutzmaßnahmen.md
+/AP2 Lernzettel/02_Notizen/8_Bedrohungen_und_Schutz
+/AP2 Lernzettel/02_Notizen/15_WiSo_Betrieb_und_Organisation/Arbeitsabläufe, Aufgabenteilung, Konzern, Kartell und Fusion.md
+/AP2 Lernzettel/02_Notizen/15_WiSo_Betrieb_und_Organisation/Rechtsformen wie GbR, KG, OHG, GmbH, AG und gemeinnützige Organisationen.md
+/AP2 Lernzettel/02_Notizen/15_WiSo_Betrieb_und_Organisation/Branchenzugehörigkeit, Produktpalette, Märkte und wirtschaftliche Einordnung.md
+/AP2 Lernzettel/02_Notizen/15_WiSo_Betrieb_und_Organisation/Organisationsformen wie Einlinien-, Mehrlinien-, Stablinien-, Sparten- und Matrixorganisation.md
+/AP2 Lernzettel/02_Notizen/15_WiSo_Betrieb_und_Organisation/Produktivität, Wirtschaftlichkeit, Rentabilität und Zielkonflikte.md
+/AP2 Lernzettel/02_Notizen/15_WiSo_Betrieb_und_Organisation/Arbeitgeberverbände, Gewerkschaften, Betriebsrat und Jugend- und Auszubildendenvertretung.md
+/AP2 Lernzettel/02_Notizen/15_WiSo_Betrieb_und_Organisation
+/AP2 Lernzettel/02_Notizen/10_Backup_und_Hochverfuegbarkeit/Backupstrategien (Vollbackup, inkrementell, differentiell, kontinuierlich).md
+/AP2 Lernzettel/02_Notizen/10_Backup_und_Hochverfuegbarkeit/USV (Arten, Vor- und Nachteile).md
+/AP2 Lernzettel/02_Notizen/10_Backup_und_Hochverfuegbarkeit/Band, Platte, NAS, SAN, Cloud, USB und optische Datenträger als Sicherungsmedien.md
+/AP2 Lernzettel/02_Notizen/10_Backup_und_Hochverfuegbarkeit/Notfallkonzept, Disaster Recovery.md
+/AP2 Lernzettel/02_Notizen/10_Backup_und_Hochverfuegbarkeit/RAID (Arten, Vor- und Nachteile).md
+/AP2 Lernzettel/02_Notizen/10_Backup_und_Hochverfuegbarkeit/Archivierung (Archivbit).md
+/AP2 Lernzettel/02_Notizen/10_Backup_und_Hochverfuegbarkeit/Berechnung von Backup- und Wiederherstellungsdauer anhand von Bandbreite, Geschwindigkeit, Datenmenge und Komprimierung.md
+/AP2 Lernzettel/02_Notizen/10_Backup_und_Hochverfuegbarkeit/Snap-Shot, Versionierung, Hochverfügbarkeit (Clustering, Load Balancing, FHRP).md
+/AP2 Lernzettel/02_Notizen/10_Backup_und_Hochverfuegbarkeit
+/AP2 Lernzettel/02_Notizen/2_Datenbanken_und_Schnittstellen/OpenData.md
+/AP2 Lernzettel/02_Notizen/2_Datenbanken_und_Schnittstellen/Relationale, nicht relationale & NoSQL Datenbanken.md
+/AP2 Lernzettel/02_Notizen/2_Datenbanken_und_Schnittstellen/APIs und REST.md
+/AP2 Lernzettel/02_Notizen/2_Datenbanken_und_Schnittstellen/Dateiaustauschformate (CSV, JSON, XML ...).md
+/AP2 Lernzettel/02_Notizen/2_Datenbanken_und_Schnittstellen/Normalisierung Regeln.md
+/AP2 Lernzettel/02_Notizen/2_Datenbanken_und_Schnittstellen/SQL Befehle (Aufbau, Arten und JOINs).md
+/AP2 Lernzettel/02_Notizen/2_Datenbanken_und_Schnittstellen/ER-Modell (Attribute, Beziehungen, Kardinalitäten, referenzielle Integrität).md
+/AP2 Lernzettel/02_Notizen/2_Datenbanken_und_Schnittstellen
+/AP2 Lernzettel/02_Notizen
+/AP2 Lernzettel/Verzeichnis_Struktur_Aufbau.txt
+/AP2 Lernzettel/01_Index/Index_WiSo.md
+/AP2 Lernzettel/01_Index/Index_Netzwerke.md
+/AP2 Lernzettel/01_Index/Index_Systeme.md
+/AP2 Lernzettel/01_Index/00_Dashboard.md
+/AP2 Lernzettel/01_Index
+/AP2 Lernzettel/99_Anhaenge
+/AP2 Lernzettel/Prüfungskatalog – Seiten 17–36.md
+/AP2 Lernzettel/
