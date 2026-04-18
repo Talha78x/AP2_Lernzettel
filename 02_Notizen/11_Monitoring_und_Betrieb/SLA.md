@@ -1,15 +1,32 @@
 # SLA
 
-Ein **SLA (Service Level Agreement)** ist ein Dienstgütevertrag. Es handelt sich um eine verbindliche Vereinbarung zwischen dem IT-Dienstleister (das kann auch die interne IT-Abteilung sein) und dem Kunden (oder Fachbereich). 
+## Definition
+**SLA (Service Level Agreement)** ist die vertragliche Vereinbarung messbarer Serviceziele zwischen Anbieter und Kunde.
 
-Das SLA definiert messbare Qualitätsstandards für eine Dienstleistung. Das ist wichtig, damit es bei Störungen (siehe [[Ticketsysteme]]) oder Ausfällen nicht zu subjektiven Diskussionen kommt ("Das Netz ist schon wieder so langsam").
+## Warum ist das so?
+Nur gemessene und definierte Qualität ist steuerbar. SLAs klären Erwartungen und Konsequenzen.
 
-**Typische Kennzahlen in einem SLA:**
-- **Verfügbarkeit:** z.B. 99,9 % pro Jahr. Das bedeutet, das System darf im gesamten Jahr maximal ca. 8,7 Stunden ausfallen. (Siehe auch [[Anforderungen an Bandbreite, Latenz, Verfugbarkeit, Ubertragungsmedien und Netzwerksicherheit]]).
-- **Reaktionszeit:** Die Zeitspanne, bis sich ein Supporter nach der Eröffnung eines Tickets aktiv des Problems annimmt (z.B. "Reaktion innerhalb von 2 Stunden bei Prio 1").
-- **Lösungszeit:** Die maximale Zeit, bis das Problem vollständig behoben ist.
-- **Support-Zeiten:** z.B. 24/7 oder nur Werktags 8-17 Uhr (5x9).
+## Zusammenspiel
+- Messung durch [[Monitoring und SNMP]]
+- Bearbeitung über [[Ticketsysteme]]
+- Einhaltung durch Rollenmodell [[1st-Level, 2nd-Level, 3rd-Level-Support]]
 
-Werden diese vertraglich zugesicherten Werte (die KPIs) nicht eingehalten, sind im SLA meist Vertragsstrafen (Pönalen) definiert.
+## Typische SLA-Kennzahlen
+| Kennzahl | Beispiel |
+|---|---|
+| Verfügbarkeit | 99,9 % pro Monat |
+| Reaktionszeit | P1 innerhalb 15 Minuten |
+| Wiederherstellungszeit (RTO) | Dienst in 4 Stunden wiederhergestellt |
+| Lösungszeit | P3 innerhalb 2 Arbeitstage |
 
-Querverweise: [[ITSM, ITIL]], [[Ticketsysteme]], [[TDD, PDCA, KVP, Kennzahlen und Soll-Ist-Vergleich]].
+## Rechenbeispiel Verfügbarkeit
+**Aufgabe:** 99,9 % Monatsverfügbarkeit bei 30 Tagen. Wie viel Ausfallzeit ist erlaubt?  
+**Lösung:** 30 Tage = 43.200 Minuten. 0,1 % davon = **43,2 Minuten**.
+
+## Eigene Worte
+SLA ist das "Messprotokoll" eines Services: Was, wie schnell und in welcher Qualität geliefert werden muss.
+
+## Prüfungsszenarien
+- SLA vs. OLA vs. UC unterscheiden
+- Verfügbarkeit berechnen
+- Prioritäten und Reaktionszeiten zuordnen

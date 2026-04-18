@@ -1,13 +1,21 @@
 # Projektplan
 
-Der **Projektplan** ist das zentrale Steuerungsdokument eines Projekts und wird zu Beginn der Planungsphase (siehe [[Projektphasen, Projektantrag und Projektabschluss]]) erstellt. Er ist kein einzelnes Dokument, sondern ein "Plan der Pläne" – eine Sammlung aller relevanten Planungsinformationen.
+## Definition
+Der **Projektplan** strukturiert Arbeitspakete, Termine, Abhängigkeiten, Ressourcen, Kosten und Risiken.
 
-**Typische Bestandteile eines Projektplans:**
-- **Aufgabenliste (Work Breakdown Structure / PSP):** Alle Arbeitspakete des Projekts werden hierarchisch aufgelistet. Jedes Paket bekommt eine geschätzte Dauer und einen Verantwortlichen.
-- **Terminplan (Gantt-Diagramm):** Die Arbeitspakete werden auf einer Zeitachse dargestellt (siehe [[Netzplan, Gantt-Diagramm und Meilensteine]]).
-- **Ressourcenplan:** Wer macht was wann? (Siehe [[Ressourcenplanung]]).
-- **Kostenplan:** Welches Budget wird für welche Phase benötigt?
+## Warum ist das so?
+Ohne Plan fehlen Steuerbarkeit und Transparenz für Stakeholder.
 
-Der Projektplan ist kein starres Dokument – er wird während des gesamten Projekts im Rahmen des [[Projektcontrolling|Projektcontrollings]] aktualisiert, wenn sich Zeitplan oder Ressourcen ändern.
+## Zusammenspiel
+- Zeitstruktur über [[Netzplan, Gannt-Diagramm, Meilenstein]]
+- Personal über [[Ressourcenplanung]]
+- Überwachung über [[Projektcontrolling]]
 
-Querverweise: [[Projektcontrolling]], [[Netzplan, Gantt-Diagramm und Meilensteine]], [[Ressourcenplanung]].
+## Mini-Struktur
+1. Ziele und Scope
+2. Arbeitspakete + Verantwortliche
+3. Termine und Meilensteine
+4. Risiken und Maßnahmen
+
+## Prüfungsszenario
+"Was passiert bei Scope Creep?" → Änderungsmanagement und Priorisierung notwendig.

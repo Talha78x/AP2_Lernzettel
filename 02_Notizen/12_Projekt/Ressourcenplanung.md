@@ -1,12 +1,14 @@
 # Ressourcenplanung
 
-Ressourcen im Projektmanagement sind alle Mittel, die benötigt werden, um das Projekt umzusetzen. Man unterscheidet drei Arten:
+## Definition
+Ressourcenplanung ordnet Personal, Budget, Hardware/Software und Zeit den Arbeitspaketen zu.
 
-1. **Personalressourcen:** Die Mitarbeiter, die an dem Projekt arbeiten. In der Planung wird festgehalten: Welcher Mitarbeiter, in welcher Rolle (z.B. Netzwerkadmin, Projektleiter), zu welchem Zeitpunkt und für wie viele Stunden benötigt wird. Wenn ein Mitarbeiter für mehrere Projekte gleichzeitig eingeplant ist, entsteht ein **Ressourcenkonflikt**.
-2. **Sachressourcen:** Hardware (Server, Kabel, Switches), Software-Lizenzen, Räumlichkeiten, Fahrzeuge.
-3. **Finanzressourcen:** Das zugeteilte Budget für das Projekt.
+## Warum ist das so?
+Gute Planung vermeidet Überlastung, Engpässe und Leerlauf.
 
-**Im Zusammenhang mit dem Magischen Dreieck (→ [[Projektcontrolling]]):**
-Fehlen Ressourcen (z.B. ein Mitarbeiter fällt krank), verlängert sich entweder die Projektlaufzeit (Zeit ↑) oder es müssen externe Kräfte eingekauft werden (Kosten ↑). Beides beeinflusst das Magische Dreieck direkt.
+## Zusammenspiel
+Ressourcen beeinflussen direkt [[Projektplan]] und [[Projektcontrolling]].
 
-Querverweise: [[Projektplan]], [[Projektcontrolling]], [[Kosten-Nutzen-Betrachtung]].
+## Beispielrechnung
+2 Admins á 50 % Verfügbarkeit, Projektlaufzeit 4 Wochen à 40h/Woche:  
+Gesamtstunden = 2 × 0,5 × 4 × 40 = **160 Stunden**.

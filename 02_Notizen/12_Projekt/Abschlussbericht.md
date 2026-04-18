@@ -1,14 +1,17 @@
 # Abschlussbericht
 
-Am Ende eines IT-Projekts (siehe [[Projektphasen, Projektantrag und Projektabschluss]]) steht die Erstellung eines formellen Abschlussberichts (oder der IHK-Projektdokumentation). 
+## Definition
+Der Abschlussbericht fasst Projektergebnis, Zielerreichung, Abweichungen, Risiken und Lessons Learned zusammen.
 
-Dieser Bericht fasst das gesamte Projekt noch einmal retrospektiv zusammen und ist oft die Voraussetzung für die formale Abnahme durch den Kunden.
+## Warum ist das so?
+Er liefert Nachweis für Abnahme, Wissenstransfer und Verbesserungen für Folgeprojekte.
 
-**Typische Inhalte:**
-- **Soll-Ist-Vergleich:** Haben wir das geliefert, was im [[Pflichtenheft]] vereinbart war? (Siehe auch [[TDD, PDCA, KVP, Kennzahlen und Soll-Ist-Vergleich]]).
-- **Wirtschaftlichkeitsbetrachtung (Nachkalkulation):** Sind wir im Budget geblieben? (Siehe [[Projektcontrolling]]).
-- **Abweichungsanalyse:** Wenn etwas nicht nach Plan lief (z. B. Zeitverzug oder Budgetüberschreitung), wird hier begründet, warum das so war und wie das Problem gelöst wurde.
-- **Lessons Learned:** Was lief gut? Was lief schlecht? Was sollte das Team beim nächsten Projekt anders machen? (Dies ist ein wichtiger Teil des [[TDD, PDCA, KVP, Kennzahlen und Soll-Ist-Vergleich|KVP]]).
-- **Übergabeprotokoll:** Die Bestätigung, dass das System in den regulären IT-Betrieb (den Support) übergeben wurde.
+## Aufbau
+1. Ausgangslage und Ziele
+2. Umgesetzte Lösung
+3. Soll-Ist-Vergleich (Zeit/Kosten/Qualität)
+4. Risiken/Probleme + Maßnahmen
+5. Fazit und Ausblick
 
-Querverweise: [[Projektcontrolling]], [[Pflichtenheft]].
+## Prüfungsszenario
+Eine gute Doku benennt nicht nur Erfolg, sondern auch Abweichungen und Begründungen.
