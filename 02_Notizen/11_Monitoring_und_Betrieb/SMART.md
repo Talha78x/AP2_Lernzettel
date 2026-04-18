@@ -1,15 +1,27 @@
 # SMART
 
-**SMART** ist eine Methode zur Formulierung von Zielen – in der Prüfung relevant für die Planung von IT-Projekten (siehe [[Projektphasen, Projektantrag und Projektabschluss]]) und für die Zieldefinition in Angeboten oder Pflichtenheften.
+## Definition
+**SMART** (Specific, Measurable, Achievable, Relevant, Time-bound) beschreibt Kriterien für gute Ziele und Maßnahmen im IT-Betrieb.
 
-Ein gut formuliertes Ziel muss alle fünf Kriterien erfüllen:
+## Warum ist das so?
+Unscharfe Ziele ("Monitoring verbessern") lassen sich nicht bewerten. SMART macht Fortschritt messbar.
 
-| Buchstabe | Kriterium | Schlechtes Beispiel | Gutes Beispiel |
-|---|---|---|---|
-| **S** | Spezifisch | "Das Netz soll besser werden." | "Die WLAN-Abdeckung im 2. OG soll verbessert werden." |
-| **M** | Messbar | "Die Performance soll steigen." | "Die Ping-Latenz zum Server soll unter 5 ms liegen." |
-| **A** | Attraktiv / Akzeptiert | (Ziel, das niemand will) | Das Ziel ist mit dem Kunden abgestimmt und von ihm unterschrieben. |
-| **R** | Realistisch | "100% Uptime" | "99,9% Verfügbarkeit laut [[SLA]]." |
-| **T** | Terminiert | "Bald fertig." | "Abnahme spätestens am 30.06.2026." |
+## Zusammenspiel
+SMART-Ziele steuern:
+- Priorisierung in [[Projektplan]]
+- Messung in [[Projektcontrolling]]
+- Servicequalität in [[SLA]]
 
-Querverweise: [[Projektphasen, Projektantrag und Projektabschluss]], [[Pflichtenheft]], [[TDD, PDCA, KVP, Kennzahlen und Soll-Ist-Vergleich]].
+## Beispiel SMART formuliert
+"Die CPU-Auslastungsalarme auf produktiven Datenbankservern werden bis **30.06.2026** so optimiert, dass die **False-Positive-Rate unter 5 %** liegt."
+
+## Eigene Worte
+SMART zwingt dazu, von Wunschdenken auf belastbare Zieldefinition zu wechseln.
+
+## Beispielaufgabe
+**Aufgabe:** Ist "Wir machen Tickets schneller" SMART?  
+**Lösung:** Nein. Besser: "Median-Lösungszeit für Priorität-3-Tickets bis 31.08.2026 von 16h auf 10h senken."
+
+## Prüfungsszenarien
+- Nicht-SMART in SMART umformulieren
+- KPI und Zielwert korrekt kombinieren

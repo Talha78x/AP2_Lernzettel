@@ -1,3 +1,7 @@
-# Arbeitsschutzgesetz, Arbeitsstättenverordnung, Betriebssicherheitsverordnung und Unfallverhütungsvorschriften.
+# Arbeitsschutzgesetz, Arbeitsstättenverordnung, Betriebssicherheitsverordnung und Unfallverhütungsvorschriften
 
-*Notiz muss noch gefüllt werden.*
+## Definition
+Rechtsrahmen für sicheren Arbeitsplatz, sichere Arbeitsmittel und Prävention von Unfällen.
+
+## Zusammenspiel
+Gefährdungsbeurteilung → Maßnahmen → Unterweisung → Kontrolle.

@@ -1,13 +1,24 @@
 # Was macht ein Projekt aus?
 
-Ein **Projekt** ist von einer normalen Daueraufgabe im IT-Alltag klar abzugrenzen. Nach der DIN 69901 definiert sich ein Projekt durch folgende Merkmale:
+## Definition
+Ein **Projekt** ist ein einmaliges, zeitlich befristetes Vorhaben mit klarem Ziel, begrenzten Ressourcen und einem definierten Ergebnis.
 
-- **Einmaligkeit:** Das Vorhaben ist in dieser Form neu und wird so nicht wiederholt (z.B. die Migration auf einen neuen Server – keine Routineaufgabe).
-- **Klares Ziel:** Es gibt ein definiertes Ergebnis, das am Ende erreicht sein soll (siehe [[Pflichtenheft]] und SMART-Ziele → [[SMART]]).
-- **Zeitliche Begrenzung:** Es hat einen definierten Start- und Endtermin.
-- **Begrenzte Ressourcen:** Es wird mit einem festen Budget und einem festgelegten Team (Personal, Hardware) durchgeführt.
-- **Projektspezifische Organisation:** Es wird ein Projektleiter bestimmt, der die Verantwortung trägt.
+## Warum ist das so?
+Regelbetrieb ist wiederholbar; Projekte sind neuartig und mit höherem Risiko verbunden. Deshalb braucht es Planung, Steuerung und Abschluss.
 
-→ Der **Unterschied zur Linienaufgabe:** Ein FISI, der täglich Passwörter zurücksetzt, führt kein Projekt durch. Wenn er aber die komplette AD-Infrastruktur des Unternehmens auf einen neuen Server migriert, handelt es sich um ein Projekt.
+## Zusammenspiel
+- Ziele konkretisieren im [[Lastenheft]] und [[Pflichtenheft]]
+- Umsetzung steuern über [[Projektplan]] und [[Projektcontrolling]]
+- Abschluss sichern im [[Abschlussbericht]]
 
-Querverweise: [[Projektphasen, Projektantrag und Projektabschluss]], [[Projektcontrolling]].
+## Projektmerkmale (typisch AP2)
+| Merkmal | Bedeutung |
+|---|---|
+| Einmaligkeit | kein Routinethema |
+| Zielvorgabe | messbares Ergebnis |
+| Begrenzung | Zeit, Budget, Personal |
+| Komplexität | Abstimmung mehrerer Stakeholder |
+
+## Beispielaufgabe
+**Frage:** "Server monatlich patchen" – Projekt oder Prozess?  
+**Lösung:** Prozess (wiederkehrend). Einmalige Einführung eines neuen Patch-Tools wäre Projekt.

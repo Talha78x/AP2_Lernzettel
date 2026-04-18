@@ -1,17 +1,32 @@
 # SOP
 
-Eine **SOP (Standard Operating Procedure)** ist eine schriftliche, schrittweise Arbeitsanweisung für wiederkehrende, standardisierte Aufgaben in der IT.
+## Definition
+**SOP (Standard Operating Procedure)** ist eine verbindliche Schritt-für-Schritt-Arbeitsanweisung für wiederkehrende Betriebsprozesse.
 
-Das Ziel einer SOP ist es, sicherzustellen, dass eine Aufgabe (z.B. das Einrichten eines neuen Mitarbeiters im [[Active Directory und LDAP|Active Directory]], das monatliche Einspielen von Patches oder das Vorgehen bei einem Serverausfall) **immer gleich, vollständig und fehlerfrei** durchgeführt wird – unabhängig davon, welcher Mitarbeiter sie ausführt.
+## Warum ist das so?
+SOPs reduzieren Fehler, machen Qualität reproduzierbar und sind für Audits/Übergaben essenziell.
 
-**Typischer Inhalt einer FISI-SOP:**
-1. Titel und Zweck der Anweisung.
-2. Geltungsbereich (Für welche Systeme / Situationen gilt sie?).
-3. Voraussetzungen (Tools, Zugriffsrechte, die benötigt werden).
-4. Schritt-für-Schritt-Anleitung (nummeriert, mit Screenshots).
-5. Erwartetes Ergebnis / Erfolgskriterium.
-6. Zuständiger und Datum der letzten Aktualisierung.
+## Zusammenspiel
+- Wird in [[Ticketsysteme]] als Standardlösung hinterlegt
+- Definiert Reaktionswege nach [[SLA]]
+- Ergänzt durch Runbooks für Störungen und Changes
 
-SOPs sind ein zentrales Element des [[ITSM, ITIL|IT-Service-Managements]] und bilden die Grundlage für eine Wissensdatenbank (Knowledge Base) im [[Ticketsysteme|Ticketsystem]].
+## Aufbau einer guten SOP
+1. Zweck und Geltungsbereich
+2. Voraussetzungen / Verantwortlichkeiten
+3. Exakte Arbeitsschritte
+4. Prüfkriterien (Done-Kriterien)
+5. Dokumentation/Nachweis
+6. Rollback/Notfallplan
 
-Querverweise: [[ITSM, ITIL]], [[Troubleshooting und Hartungsmanahmen]], [[TDD, PDCA, KVP, Kennzahlen und Soll-Ist-Vergleich]].
+## Eigene Worte
+Eine SOP ist wie ein Rezept: Wenn alle denselben Ablauf nutzen, ist das Ergebnis stabil – auch bei Schichtwechsel oder Urlaubsvertretung.
+
+## Beispielaufgabe
+**Aufgabe:** Warum gehört ein Rollback in jede Change-SOP?  
+**Lösung:** Weil Änderungen fehlschlagen können. Rollback begrenzt Ausfallzeit und Business-Risiko.
+
+## Prüfungsszenarien
+- SOP vs. Richtlinie vs. Prozess erklären
+- Mindestinhalte einer SOP aufzählen
+- Nutzen für Qualität und Compliance begründen

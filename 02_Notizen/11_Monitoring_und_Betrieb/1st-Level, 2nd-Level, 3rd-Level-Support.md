@@ -1,13 +1,31 @@
 # 1st-Level, 2nd-Level, 3rd-Level-Support
 
-Die Support-Struktur (bereits in [[Ticketsysteme]] angesprochen) ist als eigene Notiz relevant:
+## Definition
+Support-Level strukturieren die Bearbeitung von Incidents nach Komplexität und Verantwortlichkeit.
 
-| Stufe | Name | Aufgabe | Kenntnistiefe |
-|---|---|---|---|
-| **1st Level** | Helpdesk | Erstanlaufstelle, Ticketaufnahme, einfache Standardlösungen (Passwort-Reset, Neustart), Knowledge-Base-Suche | Breit, aber oberflächlich |
-| **2nd Level** | Fachabteilung / Systemadmin | Übernimmt eskalierte Tickets, löst technisch komplexere Probleme, erstellt neue KB-Artikel | Tief in spezifischen Systemen |
-| **3rd Level** | Spezialisten / Hersteller | Kern-Entwickler, Datenbankexperten, Vendor-Support. Greift bei Bugs, kritischen Systemfehlern oder Sicherheitsvorfällen ein | Tiefste Expertise |
+## Warum ist das so?
+Nicht jede Störung braucht Spezialisten. Durch klare Level sinken Kosten und Reaktionszeit.
 
-Wichtig: Jede Eskalation muss im [[Ticketsysteme|Ticketsystem]] dokumentiert werden, inkl. aller bisherigen Lösungsversuche und Diagnosen.
+## Zusammenspiel
+| Level | Aufgabe | Ziel |
+|---|---|---|
+| 1st Level | Annahme, Basisanalyse, Standardlösungen | Schnell helfen, sauber dokumentieren |
+| 2nd Level | Tiefere technische Analyse | Dauerhafte technische Lösung |
+| 3rd Level | Hersteller/Entwicklung/Architektur | Fehlerbehebung im Produkt/Design |
 
-Querverweise: [[Ticketsysteme]], [[ITSM, ITIL]], [[SLA]].
+Eskalation läuft über [[Ticketsysteme]] und orientiert sich an [[SLA]].
+
+## Eigene Worte
+1st Level ist die "Frontline", 2nd Level die "Technikwerkstatt", 3rd Level der "Spezialist mit Quellcode- oder Herstellerzugriff".
+
+## Beispielaufgabe
+**Aufgabe:** Ein Druckerproblem ist bei 30 Usern gleichzeitig vorhanden. Wohin und warum?  
+**Lösung:** Nach Erstaufnahme im 1st Level direkt 2nd Level/Infra-Team, da es ein **Major Incident** mit möglichem Server-/Netzwerkbezug ist.
+
+## Prüfungsszenarien
+- Incident vs. Service Request unterscheiden
+- Eskalationskriterien nennen
+- Rolle der Dokumentation erklären
+
+## Querverweise
+[[Ticketsysteme]] · [[SLA]] · [[SOP]]
