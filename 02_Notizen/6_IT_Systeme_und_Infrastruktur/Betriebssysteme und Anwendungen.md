@@ -1,12 +1,78 @@
 # Betriebssysteme und Anwendungen
 
-Das **Betriebssystem (OS)** bildet die Schnittstelle zwischen der Hardware eines Computers und der darauf laufenden Anwendungssoftware. Es verwaltet Ressourcen (CPU, Speicher, I/O-Geräte) und stellt grundlegende Dienste zur Verfügung.
+## Definition
+Ein **Betriebssystem (Operating System, OS)** verwaltet die Hardware-Ressourcen eines Systems und stellt grundlegende Dienste für Anwendungen bereit. Es bildet die Vermittlung zwischen Hardware und Software.
 
-**Klassifikation von Betriebssystemen:**
-- **Multi-User (Mehrbenutzersystem):** Mehrere Benutzer können gleichzeitig auf dem System arbeiten (z. B. Windows Server über Remote Desktop, Linux-Terminal-Server).
-- **Multitasking:** Das OS kann scheinbar mehrere Aufgaben gleichzeitig ausführen, indem der Scheduler (Prozessverwaltung) die CPU-Zeit rasant zwischen den Programmen wechselt. Bei *präemptivem Multitasking* behält das OS die volle Kontrolle und kann Prozessen die CPU-Zeit entziehen.
-- **Echtzeitsystem (Real-Time OS):** Garantiert die Verarbeitung von Ereignissen innerhalb einer fest definierten, harten Zeitspanne. Extrem wichtig bei [[Cyber-physische Systeme Sensoren, Aktoren und Bibliotheken|Industrieanlagen]] oder in der Medizintechnik.
+## Warum ist das so?
+Programme sollen nicht direkt jede Hardware selbst steuern müssen. Das Betriebssystem übernimmt deshalb zentrale Aufgaben:
+- Prozessverwaltung
+- Speicherverwaltung
+- Dateiverwaltung
+- Benutzer- und Rechteverwaltung
+- Geräte- und Treibersteuerung
 
-Anwendungen setzen auf dem OS auf. In großen Infrastrukturen werden Anwendungen heute selten manuell installiert, sondern über Skripte (siehe [[Skript- und Shellprogrammierung]]) oder [[Deploymentstrategien]] automatisiert verteilt.
+Erst dadurch können Anwendungen standardisiert auf Systemressourcen zugreifen.
 
-Querverweise: [[Virtualisierung Bare-Metal, Hypervisor, Container]], [[2-Tier-, 3-Tier- und Multi-Tier-Architekturen]].
+## Zusammenspiel
+- [[Server und Storage]] zeigt typische Plattformen, auf denen Betriebssysteme laufen.
+- [[Virtualisierung (Bare-Metal, Hypervisor, Container)]] trennt Betriebssysteme von physischer Hardware.
+- [[Deploymentstrategien]] regelt die Verteilung von Betriebssystemen und Anwendungen.
+- [[2-Tier-, 3-Tier- und Multi-Tier-Architekturen]] baut Anwendungen strukturell auf dem OS auf.
+
+## Eigene Worte (prüfungsnah)
+Das Betriebssystem ist die Grundschicht eines IT-Systems. Es sorgt dafür, dass CPU, RAM, Speicher und Geräte geordnet genutzt werden können. Anwendungen setzen darauf auf und nutzen die vom OS bereitgestellten Dienste.
+
+## Wichtige Aufgaben des Betriebssystems
+| Aufgabe | Bedeutung |
+|---|---|
+| Prozessverwaltung | steuert laufende Programme |
+| Speicherverwaltung | verteilt RAM sinnvoll |
+| Dateisystem | organisiert Dateien und Ordner |
+| Benutzer-/Rechteverwaltung | schützt Daten und Funktionen |
+| Geräteverwaltung | steuert Hardware über Treiber |
+
+## Wichtige Eigenschaften
+| Begriff | Bedeutung |
+|---|---|
+| Multi-User | mehrere Benutzer können das System nutzen |
+| Multitasking | mehrere Programme laufen scheinbar gleichzeitig |
+| präemptiv | das OS entzieht Prozessen CPU-Zeit kontrolliert |
+| Echtzeitsystem | reagiert innerhalb definierter Zeitgrenzen |
+
+## Anwendungen
+Anwendungen nutzen Betriebssystemdienste, zum Beispiel:
+- Office-Programme
+- Webserver
+- Datenbankdienste
+- ERP-Systeme
+- Fachanwendungen
+
+In Unternehmen werden Anwendungen oft automatisiert installiert, verteilt und aktualisiert.
+
+## Betriebssystem und Anwendung unterscheiden
+| Ebene | Beispiel |
+|---|---|
+| Betriebssystem | Windows Server, Linux, macOS |
+| Anwendung | Browser, Datenbank, ERP, Mailserver |
+
+## Beispielaufgabe mit Lösung
+**Aufgabe:** Warum ist ein Betriebssystem notwendig, damit eine Anwendung sinnvoll auf einem Rechner laufen kann?
+
+**Lösung:**
+Weil das Betriebssystem die Hardware verwaltet und standardisierte Dienste bereitstellt.
+
+**Begründung:**
+1. Anwendungen brauchen CPU-Zeit, Speicher und Dateizugriff.
+2. Das OS koordiniert diese Ressourcen.
+3. Ohne Betriebssystem müsste jede Anwendung Hardware direkt selbst ansteuern.
+
+## Typische Prüfungsszenarien
+- Betriebssystem und Anwendung abgrenzen.
+- Multi-User, Multitasking und Echtzeit erklären.
+- Aufgaben eines Betriebssystems aufzählen.
+- erklären, warum Anwendungen auf OS-Diensten aufbauen.
+
+## Merksätze
+- Das Betriebssystem verwaltet Ressourcen, Anwendungen nutzen sie.
+- Multitasking heißt geordnete Parallelität, nicht echte Gleichzeitigkeit auf jedem System.
+- Ohne OS keine saubere Abstraktion zwischen Hardware und Software.

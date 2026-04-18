@@ -1,19 +1,94 @@
 # 2-Tier-, 3-Tier- und Multi-Tier-Architekturen
 
-Bei der Architektur von IT-Anwendungen geht es darum, wie die logischen Aufgaben (Präsentation, Geschäftslogik, Datenhaltung) auf physische Systeme oder Server verteilt werden. 
+## Definition
+**Tier-Architekturen** beschreiben, wie die Aufgaben einer Anwendung auf verschiedene Schichten oder Systeme verteilt werden. Typische Aufgaben sind:
+- **Präsentation** (Benutzeroberfläche)
+- **Geschäftslogik**
+- **Datenhaltung**
 
-**2-Tier-Architektur (Zweischicht-Modell):**
-Eine klassische [[Client-Server und Peer-to-Peer|Client-Server-Umgebung]].
-- *Tier 1 (Client):* Übernimmt die Präsentation (Benutzeroberfläche) und oft auch die Geschäftslogik ("Fat Client").
-- *Tier 2 (Server):* Beinhaltet die Datenbank (z. B. einen SQL-Server).
-- *Nachteil:* Wenn sich die Logik ändert, muss auf jedem Client ein Update eingespielt werden.
+Je nach Architektur liegen diese Aufgaben auf zwei, drei oder mehr Ebenen.
 
-**3-Tier-Architektur (Dreischicht-Modell):**
-Dies ist der heutige Standard für verteilte Systeme und Web-Anwendungen.
-1. **Präsentationsschicht (Presentation Tier):** Die Benutzeroberfläche (oft ein Webbrowser oder "Thin Client").
-2. **Logikschicht (Application Tier):** Hier läuft die eigentliche Datenverarbeitung und Geschäftslogik auf einem Applikations- oder Webserver.
-3. **Datenschicht (Data Tier):** Ein dedizierter Datenbankserver (siehe [[Relationale, nicht relationale NoSQL Datenbanken]]), der nur die Daten speichert und auf Anfragen der Logikschicht antwortet.
+## Warum ist das so?
+Wenn alle Aufgaben in einer einzigen Anwendung oder auf einem einzigen System liegen, entstehen schnell Probleme:
+- schlechte Skalierbarkeit
+- schwierige Wartung
+- hohe Abhängigkeit zwischen Oberfläche, Logik und Daten
+- geringere Sicherheit
 
-*Vorteile der 3-Tier-Architektur:* Hohe Sicherheit (die Datenbank ist vom Nutzer getrennt), exzellente Skalierbarkeit (man kann mehr App-Server hinzufügen, ohne die Datenbank anzufassen) und leichtere Wartung.
+Durch die Aufteilung in Schichten lassen sich Systeme besser pflegen, absichern und erweitern.
 
-Querverweise: [[Server und Storage]], [[On-Premises, Cloud, Housing, Hosting sowie IaaS, PaaS und SaaS]].
+## Zusammenspiel
+- [[Betriebssysteme und Anwendungen]] liefert die Plattform für die einzelnen Schichten.
+- [[Server und Storage]] zeigt, auf welchen Systemen die Tiers laufen können.
+- [[On-Premises, Cloud, Housing, Hosting sowie IaaS, PaaS und SaaS]] beschreibt, wo diese Tiers betrieben werden.
+- [[Load Balancing]] ist vor allem bei der Logik- oder Webschicht relevant.
+- [[Deploymentstrategien]] greifen direkt in die Verteilung und Aktualisierung der Tiers ein.
+
+## Eigene Worte (prüfungsnah)
+Eine Tier-Architektur teilt eine Anwendung in sinnvolle Aufgabenbereiche auf. Die Oberfläche spricht nicht direkt alles selbst ab, sondern ruft oft eine separate Logikschicht auf, die wiederum mit der Datenbank kommuniziert.
+
+## 2-Tier-Architektur
+| Schicht | Aufgabe |
+|---|---|
+| Client | Oberfläche und oft ein Teil der Logik |
+| Server | Datenhaltung, oft Datenbank |
+
+**Typischer Fall:**
+Ein Fat Client greift direkt auf einen Datenbankserver zu.
+
+**Nachteile:**
+- Logik oft auf vielen Clients verteilt
+- Updates aufwendiger
+- direkte Datenbankzugriffe durch Clients sind sicherheits- und wartungsintensiver
+
+## 3-Tier-Architektur
+| Schicht | Aufgabe |
+|---|---|
+| Presentation Tier | Benutzeroberfläche, z. B. Browser |
+| Application Tier | Geschäftslogik |
+| Data Tier | Datenbank / Datenspeicher |
+
+**Vorteile:**
+- bessere Wartbarkeit
+- bessere Skalierung
+- bessere Trennung von Zuständigkeiten
+- Datenbank direkter vom Benutzer getrennt
+
+## Multi-Tier
+Bei **Multi-Tier** wird weiter aufgeteilt, zum Beispiel:
+- Webserver separat
+- API separat
+- Authentifizierungsdienst separat
+- Cache separat
+- Datenbank separat
+
+Das ist besonders in größeren Web- und Cloud-Architekturen üblich.
+
+## Vergleich
+| Architektur | Vorteil | Nachteil | Typischer Einsatz |
+|---|---|---|---|
+| 2-Tier | einfach | schlechter skalierbar | kleine klassische Client-Server-Systeme |
+| 3-Tier | gut wartbar, Standard | mehr Komponenten | Webanwendungen, Unternehmenssoftware |
+| Multi-Tier | sehr flexibel und skalierbar | hohe Komplexität | große verteilte Systeme |
+
+## Beispielaufgabe mit Lösung
+**Aufgabe:** Ein Webbrowser greift auf einen Webserver zu. Dieser verarbeitet die Geschäftslogik und speichert Daten in einer separaten Datenbank. Welche Architektur liegt vor?
+
+**Lösung:**
+Eine **3-Tier-Architektur**.
+
+**Begründung:**
+1. Browser = Präsentationsschicht
+2. Web-/Applikationsserver = Logikschicht
+3. Datenbankserver = Datenschicht
+
+## Typische Prüfungsszenarien
+- 2-Tier und 3-Tier unterscheiden.
+- Fat Client und Thin Client einordnen.
+- Vorteile getrennter Logik- und Datenschicht erklären.
+- Multi-Tier als Weiterentwicklung großer Systeme begründen.
+
+## Merksätze
+- Je mehr Tiers, desto besser trennbar, aber desto komplexer.
+- 3-Tier ist der klassische Standard moderner Unternehmensanwendungen.
+- Direkter Client-auf-Datenbank-Zugriff ist typisch für 2-Tier.

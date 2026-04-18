@@ -1,21 +1,93 @@
 # Firewall (IDS, IPS, DMZ, ACL, Filtertabelle)
 
-Eine Firewall ist das zentrale Sicherheitssystem an den Netzwerkgrenzen. Sie kontrolliert den ein- und ausgehenden Datenverkehr anhand von Regeln.
+## Definition
+Eine **Firewall** kontrolliert Netzwerkverkehr anhand definierter Regeln. Sie entscheidet, welcher Verkehr erlaubt, blockiert oder genauer geprüft wird. Firewalls schützen Netze, Systeme und Dienste vor ungewolltem Zugriff.
 
-**Firewall-Arten:**
-- **Paketfilter-Firewall (Stateless):** Prüft jedes Paket einzeln anhand von Quell-/Ziel-IP, Port und Protokoll. Schnell, aber ohne Kontext (weiß nicht, ob ein Paket zu einer erlaubten Verbindung gehört).
-- **Stateful Inspection Firewall:** Merkt sich den Zustand von Verbindungen (Connection Table). Erlaubt automatisch Antwortpakete einer genehmigten Anfrage. Standard in modernen Umgebungen.
-- **Proxy-Firewall (Application Gateway):** Versteht Protokolle auf Layer 7 (HTTP, FTP). Baut die Verbindung selbst auf und prüft den Inhalt.
-- **NGFW (Next-Generation Firewall):** Kombination aus allem: Stateful Inspection + IDS/IPS + Deep Packet Inspection + Anwendungskontrolle.
+## Warum ist das so?
+Nicht jeder Netzwerkverkehr ist erwünscht. Ohne Kontrolle könnten:
+- interne Systeme direkt erreichbar sein
+- unerlaubte Dienste offen stehen
+- Angriffe ungehindert passieren
+- Schadsoftware leichter kommunizieren
 
-**IDS / IPS:**
-- *IDS (Intrusion Detection System):* Überwacht den Netzwerkverkehr passiv und **meldet** verdächtige Muster (Alarm), greift aber nicht ein.
-- *IPS (Intrusion Prevention System):* Wie das IDS, aber es **blockiert** den Angriffs-Traffic aktiv in Echtzeit.
+Eine Firewall schafft daher eine technische Kontrollinstanz an Netzgrenzen oder zwischen Sicherheitszonen.
 
-**DMZ (Demilitarisierte Zone):**
-Ein separates Netzwerksegment zwischen dem Internet und dem internen LAN (oft mit zwei Firewalls realisiert). Öffentlich erreichbare Server (Webserver, Mail-Relay) werden in der DMZ platziert. So ist das interne Netz auch dann geschützt, wenn ein DMZ-Server kompromittiert wird.
+## Zusammenspiel
+- [[Netzwerkkomponenten]] ordnet Firewalls als zentrale Sicherheitskomponente ein.
+- [[VLAN (Arten, Trunking ...)]] und Routing-Zonen werden oft über Firewall-Regeln miteinander verbunden oder getrennt.
+- [[Schutzziele der IT]] liefert die Sicherheitsziele hinter Firewall-Konzepten.
+- [[Firewall (IDS, IPS, DMZ, ACL, Filtertabelle)]] arbeitet häufig mit [[Routing (statisch, dynamisch, Inter-VLAN, Protokolle wie OSPF, RIP, BGP)]] und NAT zusammen.
+- [[Zutritts-, Zugangs- und Zugriffskontrolle]] ergänzt die organisatorische Perspektive.
 
-**ACL (Access Control List):**
-Eine geordnete Liste von Erlaubt/Verweigert-Regeln, die direkt auf Router- oder Switch-Interfaces angewendet wird. Jede Regel prüft Pakete von oben nach unten – das erste Match gewinnt.
+## Eigene Worte (prüfungsnah)
+Eine Firewall ist der Türsteher des Netzwerks. Sie prüft nicht einfach nur "Internet ja oder nein", sondern bewertet Verkehrsregeln zwischen Quell- und Zieladresse, Ports, Protokollen und oft sogar Anwendungen.
 
-Querverweise: [[Netzwerkkomponenten]], [[VLAN Arten, Trunking ...]], [[Schutzziele der IT]].
+## Firewall-Arten
+| Art | Arbeitsweise | Vorteil | Nachteil |
+|---|---|---|---|
+| Paketfilter / Stateless | prüft jedes Paket einzeln | schnell, einfach | kein Verbindungsbezug |
+| Stateful Firewall | merkt sich Verbindungszustände | praxistauglich, Standard | mehr Komplexität |
+| Proxy / Application Gateway | terminiert und prüft Anwendungsprotokolle | tiefe Kontrolle | höherer Aufwand |
+| NGFW | kombiniert mehrere Verfahren | sehr leistungsfähig | komplex und ressourcenintensiv |
+
+## IDS und IPS
+| Begriff | Bedeutung |
+|---|---|
+| IDS (Intrusion Detection System) | erkennt verdächtige Muster und meldet sie |
+| IPS (Intrusion Prevention System) | erkennt und blockiert verdächtigen Verkehr aktiv |
+
+**Merke:** IDS = melden, IPS = melden und eingreifen.
+
+## ACL und Filtertabelle
+Eine **ACL (Access Control List)** ist eine geordnete Regelliste. Typische Kriterien:
+- Quell-IP
+- Ziel-IP
+- Protokoll
+- Port
+- Aktion erlauben oder verbieten
+
+**Wichtig:** Regeln werden meist von oben nach unten geprüft. Das erste passende Match entscheidet.
+
+## DMZ
+Die **DMZ (Demilitarized Zone)** ist ein separates Netzsegment zwischen externem Netz und internem LAN.
+
+Typische Systeme in der DMZ:
+- Webserver
+- Mail-Relay
+- Reverse Proxy
+- öffentliche Portale
+
+**Warum DMZ?**
+Falls ein öffentlich erreichbarer Server kompromittiert wird, ist das interne Netz besser abgeschirmt.
+
+## Firewall im Zusammenspiel mit Zonen
+| Zone | Typische Eigenschaft |
+|---|---|
+| Internet / untrusted | externe, unsichere Seite |
+| DMZ | öffentlich erreichbare Dienste |
+| internes LAN | besonders schützenswert |
+| Management-Netz | stark eingeschränkt |
+
+## Beispielaufgabe mit Lösung
+**Aufgabe:** Ein Unternehmen möchte einen Webserver öffentlich erreichbar machen, ohne das interne Netz direkt freizugeben. Welche Netzstruktur ist passend?
+
+**Lösung:**
+Eine **DMZ** mit Firewall-Regeln.
+
+**Begründung:**
+1. Der Webserver wird in ein separates Segment gestellt.
+2. Nur notwendige Zugriffe aus dem Internet werden erlaubt.
+3. Das interne LAN bleibt zusätzlich geschützt und ist nicht direkt exponiert.
+
+## Typische Prüfungsszenarien
+- Firewall-Arten unterscheiden.
+- IDS und IPS gegeneinander abgrenzen.
+- DMZ erklären.
+- ACL-Reihenfolge und Regelwirkung beschreiben.
+- erklären, warum Firewall nicht gleich Antivirus ist.
+
+## Merksätze
+- Firewall regelt Verkehr, nicht nur "an oder aus".
+- IDS erkennt, IPS blockiert.
+- DMZ schützt das interne Netz vor öffentlich erreichbaren Diensten.
+- Die Reihenfolge in ACLs ist entscheidend.

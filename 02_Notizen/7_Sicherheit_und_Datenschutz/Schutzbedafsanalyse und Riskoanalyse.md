@@ -1,20 +1,84 @@
 # Schutzbedafsanalyse und Riskoanalyse
 
-Nach dem **BSI IT-Grundschutz** (speziell BSI-Standard 200-2 und 200-3) sind die Schutzbedarfsfeststellung und die Risikoanalyse zentrale Werkzeuge, um die IT-Sicherheit eines Unternehmens systematisch zu planen.
+## Definition
+Die **Schutzbedarfsanalyse** bewertet, wie schwerwiegend die Folgen wären, wenn Schutzziele verletzt werden. Die **Risikoanalyse** untersucht zusätzlich konkrete Gefährdungen, Wahrscheinlichkeiten und Schäden.
 
-**1. Schutzbedarfsfeststellung:**
-Hier wird bewertet, welcher Schaden für das Unternehmen entstehen würde, wenn die [[Schutzziele der IT|Schutzziele]] (Vertraulichkeit, Integrität, Verfügbarkeit) verletzt werden. 
-Die Einstufung erfolgt klassisch in drei Kategorien:
-- **Normal:** Die Schadensauswirkungen sind begrenzt und überschaubar.
-- **Hoch:** Die Auswirkungen können beträchtlich sein (z. B. empfindliche finanzielle Einbußen, Verstoß gegen Gesetze).
-- **Sehr hoch:** Die Auswirkungen können existenzbedrohend oder katastrophal sein (z. B. Insolvenz, Gefahr für Leib und Leben).
-*Wichtig:* Es gilt das **Maximumprinzip**. Wenn ein Server für die Verfügbarkeit "hoch", für Integrität "normal" und für Vertraulichkeit "sehr hoch" eingestuft ist, bekommt das gesamte System den Schutzbedarf "sehr hoch".
+## Warum ist das so?
+Nicht jedes System ist gleich kritisch. Ein Testsystem für Schulungszwecke braucht andere Schutzmaßnahmen als:
+- ein Produktionsserver
+- ein Domaincontroller
+- eine medizinische Anwendung
+- ein Gehaltsabrechnungssystem
 
-**2. Risikoanalyse:**
-Wenn IT-Systeme einen "hohen" oder "sehr hohen" Schutzbedarf haben oder in speziellen Einsatzszenarien betrieben werden (die nicht vom normalen IT-Grundschutz-Kompendium abgedeckt sind), muss eine explizite Risikoanalyse durchgeführt werden. Dabei wird geprüft:
-- Welche konkreten Gefährdungen (Threats) gibt es?
-- Wie hoch ist die Eintrittswahrscheinlichkeit?
-- Wie hoch ist die Schadenshöhe?
-Aus dieser Matrix werden dann gezielt zusätzliche Sicherheitsmaßnahmen abgeleitet.
+Sicherheit muss deshalb am tatsächlichen Risiko ausgerichtet werden und nicht pauschal für alles gleich aussehen.
 
-Querverweise: [[TOM]], [[DSGVO und IT-Grundschutz Personbezogene Daten usw...]].
+## Zusammenspiel
+- [[Schutzziele der IT]] liefert die Bewertungsgrundlage.
+- [[DSGVO und IT-Grundschutz (Personbezogene Daten usw..)]] gibt besonders bei personenbezogenen Daten zusätzliche Bedeutung.
+- [[TOM]] setzt Maßnahmen auf Basis von Schutzbedarf und Risiko um.
+- [[Security by Design]] berücksichtigt diese Bewertung schon im Entwurf.
+
+## Eigene Worte (prüfungsnah)
+Die Schutzbedarfsanalyse fragt zuerst: "Wie schlimm wäre ein Schaden?" Die Risikoanalyse fragt danach: "Welche Gefahr droht konkret, wie wahrscheinlich ist sie und welche Maßnahmen sind nötig?"
+
+## Schutzbedarfsanalyse
+Typisch wird nach den Schutzzielen bewertet:
+- **Vertraulichkeit**
+- **Integrität**
+- **Verfügbarkeit**
+
+| Einstufung | Bedeutung |
+|---|---|
+| normal | begrenzte Auswirkungen |
+| hoch | erhebliche Auswirkungen |
+| sehr hoch | existenzbedrohend, gesetzlich kritisch oder mit schweren Folgen |
+
+## Maximumprinzip
+Wenn ein System bei einem Schutzziel besonders kritisch ist, bestimmt dieser höchste Wert oft den gesamten Schutzbedarf.
+
+**Beispiel:**
+- Vertraulichkeit: sehr hoch
+- Integrität: hoch
+- Verfügbarkeit: normal
+
+=> Gesamtbewertung häufig: **sehr hoch**
+
+## Risikoanalyse
+Die Risikoanalyse betrachtet typischerweise:
+- Gefährdung / Bedrohung
+- Eintrittswahrscheinlichkeit
+- Schadenshöhe
+- daraus abgeleitetes Risiko
+
+| Faktor | Frage |
+|---|---|
+| Bedrohung | Was kann passieren? |
+| Wahrscheinlichkeit | Wie wahrscheinlich ist das? |
+| Schaden | Wie schwer wären die Folgen? |
+| Maßnahme | Was reduziert Risiko oder Schaden? |
+
+## Schutzbedarf vs. Risiko
+| Begriff | Fokus |
+|---|---|
+| Schutzbedarf | Bedeutung des Systems / Schadensausmaß |
+| Risiko | Kombination aus Gefährdung, Wahrscheinlichkeit und Schaden |
+
+## Beispielaufgabe mit Lösung
+**Aufgabe:** Ein Server speichert Gesundheitsdaten. Für Vertraulichkeit ist die Einstufung "sehr hoch", für Integrität "hoch" und für Verfügbarkeit "normal". Welcher Schutzbedarf ist insgesamt anzusetzen?
+
+**Lösung:**
+**Sehr hoch**
+
+**Begründung:**
+Nach dem Maximumprinzip bestimmt die höchste Einzelbewertung den Gesamtschutzbedarf.
+
+## Typische Prüfungsszenarien
+- Schutzbedarf und Risiko unterscheiden.
+- Maximumprinzip erklären.
+- Vertraulichkeit, Integrität und Verfügbarkeit als Bewertungsmaßstab anwenden.
+- aus einer Gefährdung sinnvolle Maßnahmen ableiten.
+
+## Merksätze
+- Schutzbedarf bewertet die Bedeutung, Risiko bewertet die Gefahrensituation.
+- Hoher Schutzbedarf bedeutet meist strengere Maßnahmen.
+- Das Maximumprinzip ist eine klassische Prüfungsfalle.

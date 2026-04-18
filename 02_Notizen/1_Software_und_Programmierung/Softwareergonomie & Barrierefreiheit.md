@@ -1,18 +1,24 @@
-# Softwareergonomie Barrierefreiheit
+# Softwareergonomie & Barrierefreiheit
 
-Softwareergonomie befasst sich mit der Gebrauchstauglichkeit (Usability) von Programmen. Eine Software ist dann ergonomisch, wenn sie Benutzer dabei unterstützt, ihre Aufgaben schnell, fehlerfrei und ohne unnötigen Stress zu erledigen. 
+## Definition
+Softwareergonomie sorgt für effiziente, fehlerarme Bedienung; Barrierefreiheit ermöglicht Nutzung unabhängig von Einschränkungen.
 
-Wichtige Kriterien (oft angelehnt an DIN EN ISO 9241) sind:
-- **Aufgabenangemessenheit:** Die Software tut genau das, was für die Aufgabe nötig ist, nicht mehr und nicht weniger.
-- **Selbstbeschreibungsfähigkeit:** Die Software ist intuitiv verständlich (z.B. durch eindeutige Icons oder Tooltips).
-- **Fehlertoleranz:** Wenn ein Nutzer einen Fehler macht, stürzt die Software nicht ab, sondern hilft bei der Korrektur.
+## Warum ist das so?
+Gute Usability senkt Schulungsaufwand und Fehlerquote. Barrierefreiheit ist oft rechtlich und ethisch zwingend.
 
-**Barrierefreiheit (Accessibility):**
-Sie ist ein Teilbereich der Softwareergonomie und nach dem Behindertengleichstellungsgesetz (BGG) für öffentliche Stellen sogar gesetzlich vorgeschrieben. Ziel ist das *Design-for-All*: Software muss auch für Menschen mit körperlichen, visuellen, auditiven oder motorischen Einschränkungen nutzbar sein.
-Typische Anforderungen sind:
-- Tastaturbedienbarkeit (komplette Steuerung ohne Maus).
-- Ausreichende Farbkontraste.
-- Kompatibilität mit Screenreadern (Vorleseprogrammen).
-- Skalierbare Schriften.
+## Zusammenspiel
+- Ergonomieregeln fließen in [[Mock-Ups]] und [[Bildschirmausgabemasken]] ein.
+- Technische Umsetzung in Frontend-Komponenten.
 
-Querverweise: [[Bildschirmausgabemasken]], [[Mock-Ups]].
+## WCAG-nahe Leitlinien
+| Prinzip | Beispiel |
+|---|---|
+| Wahrnehmbar | ausreichender Kontrast |
+| Bedienbar | komplette Tastatursteuerung |
+| Verständlich | klare Sprache, konsistente Navigation |
+| Robust | semantisches HTML, Screenreader-tauglich |
+
+## Prüfungsfrage
+**Frage:** Nenne 4 konkrete Maßnahmen für ein barrierearmes Formular.
+
+**Lösung:** Labels, Fehlermeldung am Feld, Fokus-Reihenfolge, ausreichender Kontrast.

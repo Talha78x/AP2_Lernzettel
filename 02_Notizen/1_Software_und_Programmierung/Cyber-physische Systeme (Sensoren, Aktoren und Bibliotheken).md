@@ -1,13 +1,28 @@
-# Cyber-physische Systeme Sensoren, Aktoren und Bibliotheken
+# Cyber-physische Systeme (Sensoren, Aktoren und Bibliotheken)
 
-Ein **Cyber-physisches System (CPS)** ist ein Verbund aus informationstechnischen und softwaretechnischen Komponenten mit mechanischen und elektronischen Teilen, die über eine Dateninfrastruktur (wie das Internet) miteinander kommunizieren. CPS sind die Grundlage von Industrie 4.0 und Smart Factories.
+## Definition
+Cyber-physische Systeme (CPS) verbinden Software mit physischer Welt: Sensoren messen, Software entscheidet, Aktoren handeln.
 
-Die wichtigsten Bestandteile sind:
-- **Sensoren:** Sie erfassen Daten aus der physischen Welt (z. B. Temperatur, Bewegung, Licht) und wandeln sie in digitale Signale um.
-- **Aktoren:** Sie nehmen digitale Befehle entgegen und führen physische Handlungen aus (z. B. einen Motor starten, ein Ventil schließen oder eine LED einschalten).
-- **Steuerungssoftware / Middleware:** Sie verarbeitet die Sensordaten und entscheidet, was die Aktoren tun sollen.
-- **Vernetzung:** Die Kommunikation läuft oft über spezielle IoT-Protokolle wie MQTT oder klassische Netzwerkprotokolle (siehe [[Standardprotokolle TCP, UDP, MAC, ARP, ICMP, HTTP, HTTPS, FTP, SMTP....]]).
+## Warum ist das so?
+Viele reale Prozesse (Temperatur, Druck, Position) müssen digital überwacht und geregelt werden.
 
-In der Praxis (und oft im Prüfungslabor) werden CPS mit Mikrocontrollern (wie ESP32 oder Raspberry Pi) realisiert. Für die Programmierung nutzt man vorgefertigte **Bibliotheken (Libraries)**, um nicht jeden Sensor von Grund auf neu programmieren zu müssen. Diese Bibliotheken stellen fertige [[Programmierparadigmen prozedural, objektorientiert, funktional, deklarativ|Funktionen oder Klassen]] bereit, um z.B. einen Temperatursensor einfach mit `readTemperature()` auszulesen.
+## Zusammenspiel
+Sensor -> Verarbeitung/Regelung -> Aktor.
+Bibliotheken liefern Treiber/Funktionen für Hardwarezugriff.
 
-Querverweise: [[Automatisierung]], [[APIs und REST]], [[LAN, WAN, WLAN ....]].
+```mermaid
+flowchart LR
+A[Sensorwert] --> B[Controller-Logik]
+B --> C[Aktor]
+B --> D[Monitoring/Alarm]
+```
+
+## Eigene Worte
+„CPS sind Programme, die nicht nur Daten anzeigen, sondern die reale Welt beeinflussen.“
+
+## Beispielaufgabe
+**Aufgabe:** Lüfter soll bei > 70°C auf 100% laufen, sonst 40%.
+
+**Lösung:**
+- `if temp > 70 then pwm=100 else pwm=40`
+- Erweiterung: Hysterese, damit Lüfter nicht sekündlich springt.

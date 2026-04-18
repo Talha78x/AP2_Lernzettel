@@ -1,18 +1,42 @@
 # Algorithmen und Kontrollstrukturen
 
-Ein **Algorithmus** ist eine eindeutige Handlungsvorschrift zur Lösung eines Problems. Er besteht aus endlich vielen, wohldefinierten Einzelschritten. Im IT-Alltag begegnen uns Algorithmen ständig, z. B. als Sortieralgorithmus (Bubble Sort) oder bei der Suche in einem [[Active Directory und LDAP|Verzeichnisdienst]].
+## Definition
+Ein **Algorithmus** ist eine endliche, eindeutige und ausführbare Schrittfolge zur Lösung eines Problems.
+**Kontrollstrukturen** legen fest, in welcher Reihenfolge Schritte ausgeführt werden (Sequenz, Auswahl, Wiederholung).
 
-Um die Logik eines Algorithmus zu steuern, benötigt man **Kontrollstrukturen**. Sie legen fest, in welcher Reihenfolge die Anweisungen abgearbeitet werden. Die drei Grundbausteine (die oft im [[Pseudocode]] oder in [[UML Diagramme|Aktivitätsdiagrammen]] dargestellt werden) sind:
+## Warum ist das so?
+Programme müssen für Menschen planbar und für Rechner deterministisch sein. Kontrollstrukturen reduzieren Komplexität und vermeiden unkontrollierte Sprunglogik.
 
-1. **Sequenz:**
-   Die einfache, lineare Ausführung von Befehlen nacheinander.
-2. **Selektion (Verzweigung / Bedingung):**
-   Eine Fallunterscheidung. Ein Codeblock wird nur ausgeführt, wenn eine bestimmte Bedingung wahr ist.
-   *Beispiel:* `IF (Passwort == richtig) THEN Login() ELSE Abbruch()`
-3. **Iteration (Schleife):**
-   Eine Anweisung wird so lange wiederholt, bis eine Abbruchbedingung erfüllt ist (oder für eine fest definierte Anzahl von Durchläufen).
-   *Beispiel:* `WHILE`, `FOR`, `DO-UNTIL`
+## Zusammenspiel
+- Anforderungen aus [[Mock-Ups]] und [[Bildschirmausgabemasken]] definieren die fachlichen Abläufe.
+- Die Abläufe werden als [[Pseudocode]] oder [[UML Diagramme]] modelliert.
+- Danach erfolgt die Umsetzung in [[Programmiersprachen]] unter Nutzung passender [[Programmierparadigmen (prozedural, objektorientiert, funktional, deklarativ)]].
 
-In Prüfungen wird oft verlangt, aus einer Textvorgabe heraus die passenden Kontrollstrukturen zu wählen (z.B. "Überprüfe für alle 100 User in der CSV-Datei... -> FOR-Schleife").
+## Eigene Worte (prüfungsnah)
+„Ein Algorithmus ist wie ein Kochrezept: klare Schritte, klare Reihenfolge, klares Ergebnis. Kontrollstrukturen sind die Regeln, wann welcher Schritt dran ist.“
 
-Querverweise: [[Programmierparadigmen prozedural, objektorientiert, funktional, deklarativ]], [[Skript- und Shellprogrammierung]].
+## Kernbausteine
+| Struktur | Zweck | Beispiel |
+|---|---|---|
+| Sequenz | Schritte nacheinander | `lesen -> prüfen -> speichern` |
+| Verzweigung | Alternative Wege | `if score >= 50 then bestanden` |
+| Schleife | Wiederholung | `while eingabe falsch` |
+
+## Beispielaufgabe mit Lösung
+**Aufgabe:** Ein Shop gibt 10% Rabatt ab 100 EUR. Sonst 0%. Berechne Endpreis.
+
+**Lösung (Denkschritte):**
+1. Eingabe: Warenwert `w`.
+2. Verzweigung: wenn `w >= 100`, dann `rabatt = 0.10*w`, sonst `rabatt = 0`.
+3. Ausgabe: `endpreis = w - rabatt`.
+
+```text
+w = 120
+rabatt = 12
+endpreis = 108
+```
+
+## Typische Prüfungsszenarien
+- Ablaufdiagramm in Pseudocode übersetzen.
+- Schleifenfehler finden (Off-by-one).
+- Zeitkomplexität grob vergleichen (linear vs. quadratisch).

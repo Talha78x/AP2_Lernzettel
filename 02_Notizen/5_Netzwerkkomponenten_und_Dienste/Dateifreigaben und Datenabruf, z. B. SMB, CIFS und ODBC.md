@@ -1,34 +1,88 @@
 # Dateifreigaben und Datenabruf, z. B. SMB, CIFS und ODBC
 
-Um im Netzwerk Dateien und Datenquellen bereitzustellen, nutzt man Dateifreigabe-Protokolle, die meist nach dem [[Client-Server und Peer-to-Peer|Client-Server-Prinzip]] funktionieren.
+## Definition
+Für den Zugriff auf zentrale Ressourcen im Netzwerk gibt es unterschiedliche Verfahren:
 
-**SMB (Server Message Block) / CIFS (Common Internet File System):**
-SMB ist das Standard-Netzwerkprotokoll von Windows für Dateifreigaben, Drucker und andere Schnittstellen. CIFS ist eine alte, von Microsoft abgewandelte Variante von SMB (SMB 1.0), der Begriff wird heute aber oft noch synonym für SMB verwendet. Aktuelle Versionen (wie SMB 3.x) bieten starke Verschlüsselung und hohe Performance. Linux-Systeme nutzen das Softwarepaket *Samba*, um SMB-Freigaben bereitzustellen oder darauf zuzugreifen.
+- **SMB (Server Message Block):** Protokoll für Datei- und Druckerfreigaben, vor allem in Windows-Umgebungen
+- **CIFS:** ältere, unsichere SMB-Variante bzw. historische Bezeichnung im Umfeld von SMB 1
+- **ODBC (Open Database Connectivity):** standardisierte Schnittstelle für den Zugriff auf Datenbanken
 
-**ODBC (Open Database Connectivity):**
-Im Gegensatz zu SMB, das ganze Dateien freigibt, ist ODBC eine standardisierte Datenbankschnittstelle. Sie ermöglicht es Anwendungen (Clients), unabhängig vom konkret eingesetzten Datenbankmanagementsystem (wie MySQL, MSSQL) auf die eigentlichen Datenbankinhalte des Servers zuzugreifen.
+Wichtig ist: SMB/CIFS und ODBC lösen **nicht** dasselbe Problem.
 
-Für die Prüfung:
-- **SMB/CIFS** = Datei- und Druckerfreigabe.
-- **ODBC** = Schnittstelle für den Abruf von Datenbankinhalten.
-- In Linux-lastigen Umgebungen ist die Alternative zu SMB oft das Network File System (NFS).
+## Warum ist das so?
+Im Netzwerk will man zentrale Ressourcen auf zwei sehr unterschiedliche Arten nutzen:
+- als **Datei**, zum Beispiel ein gemeinsamer Ordner
+- als **strukturierte Datenquelle**, zum Beispiel eine SQL-Datenbank
 
-Das Thema verbindet sich gut mit [[Standardprotokolle TCP, UDP, MAC, ARP, ICMP, HTTP, HTTPS, FTP, SMTP....]], [[Relationale, nicht relationale NoSQL Datenbanken]] und [[SQL Befehle Aufbau, Arten und JOINs]].
+Deshalb braucht man unterschiedliche Protokolle und Schnittstellen. Ein Dateifreigabeprotokoll stellt Dateien bereit, eine Datenbankschnittstelle liefert Datensätze und Abfragen.
 
+## Zusammenspiel
+- [[Client-Server und Peer-to-Peer]] erklärt das zugrunde liegende Kommunikationsmodell.
+- [[Netzwerkkomponenten]] zeigt, über welche Infrastruktur solche Dienste erreichbar werden.
+- [[Relationale, nicht relationale & NoSQL Datenbanken]] und [[SQL Befehle (Aufbau, Arten und JOINs)]] sind bei ODBC fachlich eng verknüpft.
+- [[Active Directory und LDAP]] spielt bei SMB-Freigaben oft bei Anmeldung und Rechtevergabe mit hinein.
+- [[Standardprotokolle (TCP, UDP, MAC, ARP, ICMP, HTTP, HTTPS, FTP, SMTP...)]] liefert den Protokollkontext.
 
-oder 
+## Eigene Worte (prüfungsnah)
+SMB stellt mir typischerweise einen Ordner oder Drucker im Netzwerk bereit. ODBC gibt mir dagegen keine Dateien, sondern einen standardisierten Weg, aus Anwendungen heraus auf Datenbanken zuzugreifen.
 
+## SMB und CIFS
+| Begriff | Bedeutung | Prüfungsrelevanter Punkt |
+|---|---|---|
+| SMB | modernes Datei- und Druckerfreigabeprotokoll | Standard in Windows-Netzen |
+| CIFS | alte SMB-Variante / SMBv1-Umfeld | heute veraltet und unsicher |
+| Samba | Linux/Unix-Implementierung für SMB-Dienste | wichtig für gemischte Umgebungen |
 
-# Dateifreigaben und Datenabruf, z. B. SMB, CIFS und ODBC
+### Typische SMB-Einsätze
+- Netzlaufwerke
+- gemeinsame Teamordner
+- zentrale Druckerfreigaben
+- Datei-Server in Windows-Domänen
 
-Damit Benutzer im Netzwerk auf zentrale Dateien zugreifen können, werden Dateifreigaben eingesetzt. Der Server stellt einen Ordner bereit, den Clients über das Netzwerk einbinden ("mappen").
+**Wichtig:** SMBv1/CIFS sollte heute vermieden oder deaktiviert werden.
 
-**SMB / CIFS:**
-- **SMB (Server Message Block):** Das Standardprotokoll für Dateifreigaben in Windows-Umgebungen. Ermöglicht Clients, auf Ordner und Drucker auf einem Windows-Server (oder Samba-Linux-Server) zuzugreifen.
-- **CIFS:** Eine ältere Microsoft-Implementierung von SMB (eigentlich SMBv1). In modernen Umgebungen abgelöst durch SMBv2 und SMBv3, die deutlich sicherer und performanter sind. SMBv1 sollte zwingend deaktiviert werden (Einfallstor für WannaCry).
-- *Ports:* TCP 445 (direkt) und 139 (über NetBIOS).
+## ODBC
+ODBC ist keine Dateifreigabe, sondern eine **Datenbankschnittstelle**.
 
-**ODBC (Open Database Connectivity):**
-Eine standardisierte Schnittstelle, die es Anwendungen erlaubt, Daten aus verschiedenen Datenbanksystemen (z.B. MySQL, MSSQL, Oracle) abzurufen, ohne datenbankspezifischen Code schreiben zu müssen. Sehr relevant für Anwendungen, die auf Backend-Datenbanken zugreifen (siehe [[Relationale, nicht relationale NoSQL Datenbanken]] und [[APIs und REST]]).
+| Merkmal | ODBC |
+|---|---|
+| Zweck | standardisierter Zugriff auf Datenbanken |
+| Ebene | Anwendung greift auf DBMS zu |
+| Vorteil | gleiche Schnittstellenlogik trotz unterschiedlicher Datenbanken |
+| Beispiel | Reporting-Tool liest Daten aus MSSQL oder MySQL |
 
-Querverweise: [[Netzwerkkomponenten]], [[Active Directory und LDAP]].
+## SMB vs. ODBC
+| Frage | SMB / CIFS | ODBC |
+|---|---|---|
+| Gibt Dateien frei? | ja | nein |
+| Greift auf Datenbankinhalte zu? | nicht direkt | ja |
+| Typischer Client | Dateiexplorer, Office, Betriebssystem | Fachanwendung, Reporting-Tool |
+| Typischer Server | Fileserver | Datenbankserver |
+
+## Typische Ports und Praxis
+| Technik | Typischer Punkt |
+|---|---|
+| SMB | häufig TCP 445 |
+| CIFS / Altumgebungen | historisch auch 139 / NetBIOS-Kontext |
+| ODBC | nutzt je nach Datenbanksystem unterschiedliche DB-Ports |
+
+## Beispielaufgabe mit Lösung
+**Aufgabe:** Eine Benutzerin soll in einem Netz auf einen gemeinsamen Projektordner zugreifen. Ein Controlling-Tool soll dagegen Verkaufsdaten direkt aus einer SQL-Datenbank abrufen. Welche Technik passt jeweils?
+
+**Lösung:**
+- gemeinsamer Projektordner -> **SMB**
+- Abruf strukturierter Daten aus der Datenbank -> **ODBC**
+
+**Begründung:**
+SMB ist für Dateiressourcen gedacht, ODBC für Datenbankzugriffe aus Anwendungen.
+
+## Typische Prüfungsszenarien
+- SMB und ODBC sauber unterscheiden.
+- erklären, warum CIFS/SMBv1 problematisch ist.
+- Datei- und Druckerfreigabe von Datenbankzugriff abgrenzen.
+- Samba in gemischten Netzen einordnen.
+
+## Merksätze
+- SMB teilt Dateien, ODBC verbindet Anwendungen mit Datenbanken.
+- CIFS ist historisch und sicherheitstechnisch problematisch.
+- Nicht jede Netzwerkfreigabe ist eine Datenbankschnittstelle.

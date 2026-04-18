@@ -1,17 +1,93 @@
 # Client-Server und Peer-to-Peer
 
-In der Netzwerkarchitektur unterscheidet man grundlegend zwei Kommunikationsmodelle.
+## Definition
+**Client-Server** und **Peer-to-Peer (P2P)** sind zwei grundlegende Kommunikationsmodelle in Netzwerken.
 
-**Client-Server-Architektur:**
-Das Netz ist streng hierarchisch aufgebaut. Ein zentraler **Server** stellt Ressourcen, Dienste oder Daten bereit. Die **Clients** greifen auf diese Dienste zu. 
-- *Vorteile:* Zentrale Verwaltung, einfachere Datensicherung, hohe Sicherheit, gute Skalierbarkeit.
-- *Nachteile:* Fällt der Server aus (Single Point of Failure), steht der Dienst still. Serverhardware ist teuer.
-Dieses Modell ist der Standard in Unternehmensnetzwerken, z.B. bei einem [[Active Directory und LDAP]] oder bei der Bereitstellung von Webseiten über [[Standardprotokolle TCP, UDP, MAC, ARP, ICMP, HTTP, HTTPS, FTP, SMTP....|HTTP]].
+- Beim **Client-Server-Modell** stellt ein zentraler Server Dienste, Daten oder Ressourcen bereit. Clients greifen gezielt darauf zu.
+- Beim **Peer-to-Peer-Modell** sind die Teilnehmer gleichberechtigt. Jeder Peer kann gleichzeitig Anbieter und Nutzer von Ressourcen sein.
 
-**Peer-to-Peer-Architektur (P2P):**
-Alle Rechner (Peers) im Netz sind gleichberechtigt. Jeder Knoten kann sowohl Dienste in Anspruch nehmen (als Client agieren) als auch eigene Ressourcen bereitstellen (als Server agieren).
-- *Vorteile:* Keine teuren Server nötig, sehr ausfallsicher, da kein zentraler Single Point of Failure existiert.
-- *Nachteile:* Schwer zu verwalten, Datensicherung ist dezentral extrem aufwendig, Sicherheit ist schwer durchzusetzen.
+## Warum ist das so?
+Netzwerke müssen klären, **wer welche Rolle hat**:
+- Wer speichert Daten dauerhaft?
+- Wer authentifiziert Benutzer?
+- Wer beantwortet Anfragen?
+- Wer darf ausfallen, ohne dass alles stillsteht?
 
-In modernen IT-Systemen wird P2P oft in Blockchain-Technologien oder Dezentralisierungskonzepten genutzt, während klassische Infrastruktur fast ausschließlich Client-Server ist. 
-Verwandte Konzepte: [[Dateifreigaben und Datenabruf, z. B. SMB, CIFS und ODBC]], [[Betriebssysteme und Anwendungen]].
+Je nach Ziel ist ein zentrales oder dezentrales Modell sinnvoller. Unternehmen setzen meist auf zentrale Steuerung, während dezentrale Systeme auf Verteilung und Ausfallsicherheit setzen.
+
+## Zusammenspiel
+- [[OSI und TCP-IP Modell]] erklärt, auf welchen Schichten die Kommunikation technisch stattfindet.
+- [[Standardprotokolle (TCP, UDP, MAC, ARP, ICMP, HTTP, HTTPS, FTP, SMTP...)]] liefern die Regeln für diese Kommunikation.
+- [[Netzwerkrelevante Dienste (DHCP, DNS, NTP, SNMP...)]] sind meist klassische Client-Server-Dienste.
+- [[Active Directory und LDAP]] ist ein typisches Beispiel für zentrale Serverdienste.
+- P2P taucht in verteilten Systemen, Dateitausch oder Blockchain-Konzepten auf.
+
+## Eigene Worte (prüfungsnah)
+Client-Server bedeutet: Einer dient, viele fragen an. P2P bedeutet: Alle können beides. Der große Unterschied liegt also nicht im Kabel oder Protokoll, sondern in der Rollenverteilung und Verwaltung.
+
+## Gegenüberstellung
+| Merkmal | Client-Server | Peer-to-Peer |
+|---|---|---|
+| Rollen | klar getrennt | gleichberechtigt |
+| Verwaltung | zentral | dezentral |
+| Datensicherung | einfacher | aufwendiger |
+| Skalierung | gut planbar | abhängig von Peers |
+| Ausfallrisiko | Server kann Single Point of Failure sein | kein zentraler Ausfallpunkt |
+| Sicherheit | leichter zentral durchsetzbar | schwerer einheitlich steuerbar |
+
+## Typische Beispiele
+| Szenario | Modell | Warum? |
+|---|---|---|
+| Webanwendung mit Datenbank | Client-Server | Browser fragt Server an |
+| Dateiserver im Unternehmen | Client-Server | zentrale Rechte und Backups |
+| BitTorrent | Peer-to-Peer | viele Teilnehmer teilen Daten direkt |
+| Blockchain-Netzwerk | Peer-to-Peer | kein zentraler Hauptserver |
+
+## Vorteile und Nachteile
+### Client-Server
+**Vorteile:**
+- zentrale Benutzer- und Rechteverwaltung
+- einfachere Wartung
+- kontrollierte Backups
+- klare Sicherheitsrichtlinien
+
+**Nachteile:**
+- Serverausfall betrifft viele Nutzer
+- leistungsfähige Serverhardware nötig
+- zentrale Komponenten werden zum kritischen Punkt
+
+### Peer-to-Peer
+**Vorteile:**
+- keine zwingende Zentralinstanz
+- gute Lastverteilung möglich
+- einzelne Ausfälle sind oft weniger kritisch
+
+**Nachteile:**
+- schwieriger zu administrieren
+- uneinheitliche Sicherheitslage
+- Datenkonsistenz und Backup komplizierter
+
+## Beispielaufgabe mit Lösung
+**Aufgabe:** Ein Unternehmen möchte Benutzer zentral verwalten, Zugriffe protokollieren und tägliche Datensicherungen auf einem Fileserver durchführen. Welches Modell ist geeigneter?
+
+**Lösung:**
+Geeignet ist das **Client-Server-Modell**.
+
+**Begründung:**
+1. Benutzer und Rechte sollen zentral verwaltet werden.
+2. Daten sollen an einer kontrollierten Stelle gespeichert werden.
+3. Backups und Protokollierung sind mit zentralem Server deutlich einfacher.
+
+**Prüfungsfalle:**
+P2P ist nicht automatisch "moderner" oder "besser". Für Unternehmensnetze ist zentrale Verwaltung meist wichtiger als maximale Dezentralität.
+
+## Typische Prüfungsszenarien
+- Client-Server und P2P gegeneinander abgrenzen.
+- Vor- und Nachteile für Unternehmen nennen.
+- Single Point of Failure beim Client-Server erklären.
+- Typische Dienste wie DNS, DHCP oder Webserver korrekt zuordnen.
+
+## Merksätze
+- Client-Server bringt Kontrolle, P2P bringt Verteilung.
+- In Firmennetzen dominiert meist Client-Server.
+- Die Wahl des Modells beeinflusst Sicherheit, Backup und Administration direkt.

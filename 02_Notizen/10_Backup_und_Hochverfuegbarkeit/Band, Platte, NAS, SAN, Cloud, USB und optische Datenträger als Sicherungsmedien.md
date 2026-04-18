@@ -1,21 +1,74 @@
-# Band, Platte, NAS, SAN, Cloud, USB und optische Datentrager als Sicherungsmedien
+# Band, Platte, NAS, SAN, Cloud, USB und optische Datenträger als Sicherungsmedien
 
-Für ein professionelles Backup-Konzept (siehe [[Backupstrategien Vollbackup, inkrementell, differentiell, kontinuierlich]]) reicht es nicht, Daten nur auf eine andere Partition zu kopieren. Die Wahl des Sicherungsmediums hängt von Datenmenge, Budget und Sicherheitsanforderungen (wie dem [[Notfallkonzept, Disaster Recovery|RTO und RPO]]) ab.
+## Definition
+**Sicherungsmedien** sind die Speicherorte oder Speichertechnologien, auf denen Backups oder archivierte Daten abgelegt werden. Die Wahl des Mediums beeinflusst Kosten, Geschwindigkeit, Ausfallsicherheit und Schutz vor Angriffen.
 
-**1. Bandlaufwerke (Tapes, z.B. LTO):**
-Der absolute Klassiker in Rechenzentren für Langzeitbackups.
-- *Vorteile:* Enorme Speicherkapazität pro Band, extrem günstig pro Terabyte, ideal für Offline-Sicherungen (Schutz vor Ransomware, da Tapes im Safe liegen).
-- *Nachteile:* Lineares Speichermedium (es muss gespult werden), langes Suchen nach einzelnen Dateien, teure Laufwerke.
+## Warum ist das so?
+Nicht jedes Medium passt zu jedem Sicherungsziel. Wichtige Fragen sind:
+- Wie groß ist die Datenmenge?
+- Wie schnell muss gesichert oder wiederhergestellt werden?
+- Wie lange sollen Daten aufbewahrt werden?
+- Soll das Medium online, offline oder extern gelagert werden?
 
-**2. NAS (Network Attached Storage) & SAN (Storage Area Network):**
-- *NAS:* Sehr beliebt für das Erst-Backup (Disk-to-Disk). Schnell, einfach erreichbar über SMB/NFS. Nachteil: Ist das NAS ständig im Netz gemountet, kann Ransomware auch das Backup verschlüsseln.
-- *SAN:* Hochperformantes Block-Storage (Fibre Channel / iSCSI), oft für Enterprise-Virtualisierungsumgebungen genutzt, seltener als reines Backup-Ziel, eher als primärer Datenspeicher.
+Darum muss das Sicherungsmedium zum Schutzbedarf und zur Backupstrategie passen.
 
-**3. Cloud-Backup:**
-- *Vorteile:* Daten liegen physisch getrennt in einem Rechenzentrum (Brand-/Wasserschutz), flexibel skalierbar.
-- *Nachteile:* Abhängigkeit von der Internet-[[Anforderungen an Bandbreite, Latenz, Verfugbarkeit, Ubertragungsmedien und Netzwerksicherheit|Bandbreite]] (ein 10-TB-Restore dauert über das Internet sehr lange), laufende Kosten, strikte [[DSGVO und IT-Grundschutz Personbezogene Daten usw...|Datenschutzvorgaben]] müssen beachtet werden (Auftragsverarbeitungsvertrag).
+## Zusammenspiel
+- [[Backupstrategien (Vollbackup, inkrementell, differentiell, kontinuierlich)]] bestimmt, wie oft und in welchem Umfang gesichert wird.
+- [[Archivierung (Archivbit)]] ist bei Langzeitaufbewahrung relevant.
+- [[Berechnung von Backup- und Wiederherstellungsdauer anhand von Bandbreite, Geschwindigkeit, Datenmenge und Komprimierung]] hilft bei der Größen- und Zeitplanung.
+- [[Notfallkonzept, Disaster Recovery]] bewertet die Medien nach RTO und RPO.
+- [[RAID (Arten, Vor- und Nachteile)]] ist Produktivspeicher-Redundanz, aber kein Ersatz für echte Sicherungsmedien.
 
-**4. USB-Festplatten (HDD/SSD) & Optische Datenträger (DVD/Blu-ray):**
-- USB-Platten eignen sich für kleine Büros, erfordern aber oft manuelle Wechsel durch Mitarbeiter. Optische Datenträger sind heute aufgrund zu geringer Kapazitäten (maximal ca. 100 GB bei BDXL) für Firmenbackups praktisch ausgestorben.
+## Eigene Worte (prüfungsnah)
+Ein Sicherungsmedium ist nicht einfach nur "Speicherplatz". Es entscheidet mit darüber, wie schnell ein Restore möglich ist, wie gut ein Backup gegen Ransomware geschützt ist und wie wirtschaftlich die Lösung für große Datenmengen bleibt.
 
-Querverweise: [[Archivierung]], [[RAID Arten, Vor- und Nachteile]].
+## Medien im Überblick
+| Medium | Vorteil | Nachteil | Typischer Einsatz |
+|---|---|---|---|
+| Band / Tape | günstig pro TB, offline lagerbar | langsamer Zugriff, lineares Medium | Langzeitbackup, Offsite |
+| Platte / Disk | schnell, einfacher Restore | online oft stärker gefährdet | Disk-to-Disk-Backup |
+| NAS | einfach, netzbasiert | bei ständiger Erreichbarkeit angreifbar | Backup-Ziel im LAN |
+| SAN | sehr performant | teuer und komplex | eher Primärspeicher, Spezialfälle |
+| Cloud | extern, skalierbar | Internetabhängigkeit, laufende Kosten | Offsite-Backup |
+| USB | günstig für kleine Umgebungen | manuell, fehleranfällig | kleine Büros |
+| optische Datenträger | unveränderbar möglich | geringe Kapazität, unpraktisch | heute selten |
+
+## Online, offline, offsite
+| Begriff | Bedeutung |
+|---|---|
+| online | direkt im Netz erreichbar |
+| offline | vom Netz getrennt |
+| offsite | an anderem Ort gelagert |
+
+Gerade offline oder offsite ist wichtig gegen Brand, Diebstahl oder Ransomware.
+
+## Typische Auswahlkriterien
+| Kriterium | Bedeutung |
+|---|---|
+| Datenmenge | beeinflusst Wirtschaftlichkeit |
+| Restore-Geschwindigkeit | wichtig für RTO |
+| Medienkosten | wichtig für Budget |
+| Auslagerung | wichtig für Katastrophenschutz |
+| Sicherheit / Unveränderbarkeit | wichtig gegen Manipulation und Malware |
+
+## Beispielaufgabe mit Lösung
+**Aufgabe:** Ein Unternehmen möchte große Sicherungen kostengünstig langfristig aufbewahren und vor Ransomware schützen. Welches Medium ist besonders passend?
+
+**Lösung:**
+**Band / Tape**
+
+**Begründung:**
+1. sehr günstige Kosten pro Terabyte
+2. gut für Langzeitaufbewahrung
+3. offline lagerbar und damit besser gegen Online-Angriffe geschützt
+
+## Typische Prüfungsszenarien
+- Tape, Disk und Cloud vergleichen.
+- online/offline/offsite unterscheiden.
+- NAS und SAN im Backup-Kontext einordnen.
+- erklären, warum ein ständig eingebundenes Backupziel problematisch sein kann.
+
+## Merksätze
+- Schnelles Backupmedium ist nicht automatisch das sicherste.
+- Offline schützt gut gegen viele Malware-Szenarien.
+- Sicherungsmedium und Backupstrategie müssen zusammen gedacht werden.

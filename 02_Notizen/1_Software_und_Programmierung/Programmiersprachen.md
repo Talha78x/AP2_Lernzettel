@@ -1,15 +1,27 @@
 # Programmiersprachen
 
-**Programmiersprachen** dienen dazu, Algorithmen und Befehle so zu formulieren, dass ein Computer sie ausführen kann. Man unterscheidet sie grob nach ihrem Abstraktionsgrad (Maschinennähe) und nach der Art, wie der Code ausgeführt wird.
+## Definition
+Programmiersprachen sind formale Sprachen zur Beschreibung von Algorithmen und Datenstrukturen für Maschinen.
 
-**Nach Ausführung:**
-1. **Kompilierte Sprachen (z. B. C, C++):**
-   Der geschriebene Quellcode wird vor der Ausführung von einem Compiler komplett in maschinenlesbaren Binärcode übersetzt. Sie sind in der Regel sehr schnell, der Code muss aber für jedes Betriebssystem neu kompiliert werden.
-2. **Interpretierte Sprachen (z. B. Python, JavaScript, Bash):**
-   Ein Interpreter liest den Code zur Laufzeit Zeile für Zeile ein und führt ihn direkt aus. Das ist fehleranfälliger zur Laufzeit, aber extrem flexibel (siehe [[Skript- und Shellprogrammierung]]).
-3. **Zwischencode (Bytecode) / Just-in-Time (z. B. Java, C#):**
-   Der Code wird in einen universellen Zwischencode vorkompiliert und zur Laufzeit in einer virtuellen Maschine (z.B. JVM) ausgeführt. Das ermöglicht Plattformunabhängigkeit ("Write once, run anywhere").
+## Warum ist das so?
+Je nach Zielsystem und Anforderungen (Performance, Portabilität, Ökosystem) ist eine andere Sprache optimal.
 
-Außerdem werden Sprachen nach den unterstützten [[Programmierparadigmen prozedural, objektorientiert, funktional, deklarativ|Programmierparadigmen]] unterschieden (OOP, prozedural etc.). Für FISIs in der Prüfung sind meist das Lesen von leichtem Code (oft Python oder Java) sowie fundierte Kenntnisse in PowerShell oder Bash wichtig.
+## Zusammenspiel
+- Fachlogik aus [[Algorithmen und Kontrollstrukturen]].
+- Modellierung über [[Programmierparadigmen (prozedural, objektorientiert, funktional, deklarativ)]].
+- Automatisierung mit [[Skript- und Shellprogrammierung]].
 
-Querverweise: [[Programmierparadigmen prozedural, objektorientiert, funktional, deklarativ]], [[Skript- und Shellprogrammierung]], [[Pseudocode]].
+## Auswahlkriterien
+| Kriterium | Frage |
+|---|---|
+| Performance | Echtzeit oder Batch? |
+| Laufzeitumgebung | Server, Browser, Embedded? |
+| Bibliotheken | Gibt es stabile Packages? |
+| Team-Know-how | Kann das Team warten? |
+
+## Beispielaufgabe
+**Aufgabe:** Für Datenanalyse + kleine Web-API Sprache wählen.
+
+**Lösung:**
+- Python sinnvoll wegen Datenbibliotheken und schneller Entwicklung.
+- Bei maximaler Performance evtl. Ergänzung durch C++/Rust-Komponente.

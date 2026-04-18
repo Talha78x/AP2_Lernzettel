@@ -1,15 +1,34 @@
 # Automatisierung
 
-Automatisierung bedeutet, dass technische Vorgänge oder IT-Prozesse ohne ständiges menschliches Eingreifen ablaufen. Für Systemintegratoren (FISI) ist Automatisierung ein Kernthema, um Fehler zu reduzieren und Zeit zu sparen.
+## Definition
+Automatisierung bedeutet, wiederkehrende Prozesse mit Skripten, Jobs oder Workflows ohne manuelle Einzelschritte auszuführen.
 
-In der IT-Infrastruktur umfasst Automatisierung typischerweise:
-- **Skripte:** Automatisches Anlegen von Benutzern, Auswerten von Logs oder Bereinigen von Festplatten (siehe [[Skript- und Shellprogrammierung]]).
-- **Deployment:** Das automatische Ausrollen von Software oder Betriebssystemen (Softwareverteilung, Patch-Management) (siehe [[Deploymentstrategien]]).
-- **Konfigurationsmanagement:** Tools wie Ansible, Chef oder Puppet ermöglichen es, hunderte Server nach einer zentralen Vorlage identisch zu konfigurieren.
+## Warum ist das so?
+Wiederholte manuelle Arbeit ist fehleranfällig, langsam und teuer. Automatisierung erhöht Qualität, Geschwindigkeit und Nachvollziehbarkeit.
 
-In der industriellen Fertigung (Industrie 4.0) wird die Automatisierung über die **Automatisierungspyramide** strukturiert:
-- *Feldebenen* (Sensoren/Aktoren, siehe [[Cyber-physische Systeme Sensoren, Aktoren und Bibliotheken]]) melden Daten nach oben.
-- *Steuerungsebenen* (SPS) regeln den direkten Prozess.
-- *Unternehmensebenen* (ERP-Systeme) verwalten die Grobplanung.
+## Zusammenspiel
+- Umsetzung über [[Skript- und Shellprogrammierung]].
+- Fachliche Logik basiert auf [[Algorithmen und Kontrollstrukturen]].
+- Qualitätssicherung erfolgt durch Tests und Logs.
 
-Querverweise: [[Monitoring und SNMP]], [[Skript- und Shellprogrammierung]], [[Ticketsysteme]].
+## Eigene Worte
+„Automatisierung heißt: Einmal sauber denken, dann tausendmal korrekt ausführen lassen.“
+
+## Automatisierungsarten
+| Art | Beispiel | Nutzen |
+|---|---|---|
+| Zeitgesteuert | nächtliches Backup | Entlastung Team |
+| Ereignisgesteuert | Ticket erstellt -> User anlegen | schnellere Reaktion |
+| CI/CD | Build + Tests bei Git-Push | weniger Integrationsfehler |
+
+## Beispielaufgabe mit Lösung
+**Aufgabe:** Täglicher Log-Export (300 MB/Tag) soll 30 Tage aufbewahrt werden. Benötigter Speicher?
+
+**Rechenweg:**
+`300 MB * 30 = 9000 MB = 9 GB` (ohne Kompression).
+
+Mit 40% Kompression: `9 GB * 0.6 = 5.4 GB`.
+
+## Prüfungsszenarien
+- Prozess analysieren und Automatisierungspotenzial begründen.
+- Vor-/Nachteile (Sicherheit, Wartung, Monitoring) erläutern.

@@ -1,19 +1,87 @@
 # Zertifikate
 
-Zertifikate sind digitale Ausweise, die die Identität einer Person, eines Servers oder eines Unternehmens in der digitalen Welt bestätigen. Sie bilden das Fundament für sichere Verbindungen wie [[TLS SSL]] (HTTPS) oder [[VPN Tunneling, standortubergreifende Kommunikation|IPSec]].
+## Definition
+Ein **Zertifikat** ist ein digitaler Nachweis, dass ein bestimmter öffentlicher Schlüssel zu einer bestimmten Identität gehört, zum Beispiel:
+- einer Domain
+- einem Server
+- einer Person
+- einer Organisation
 
-**Inhalt eines Zertifikats (oft im X.509-Standard):**
-- Angaben zum Inhaber (z.B. Domainname des Webservers).
-- Der **Public Key** des Inhabers.
-- Gültigkeitsdauer.
-- Die [[Hashverfahren digitale Signaturen|digitale Signatur]] der ausstellenden Zertifizierungsstelle (CA).
+## Warum ist das so?
+Ein öffentlicher Schlüssel allein sagt noch nicht, wem er wirklich gehört. Ohne Vertrauensmechanismus könnte ein Angreifer einfach einen eigenen Schlüssel als "echten Serverschlüssel" ausgeben.
 
-**PKI (Public Key Infrastructure):**
-Eine PKI ist das hierarchische System aus Hardware, Software und Prozessen, das Zertifikate ausstellt, verwaltet und widerruft.
-- **Root CA (Wurzelzertifizierungsstelle):** Die oberste, absolut vertrauenswürdige Instanz. Ihr Zertifikat ist im Browser oder Betriebssystem fest vorinstalliert.
-- **Sub CA (Zwischenzertifizierungsstelle):** Stellt im Auftrag der Root CA die eigentlichen Zertifikate für Endkunden aus (erhöht die Sicherheit, da die Root CA offline genommen werden kann).
-- **CRL (Certificate Revocation List):** Eine Sperrliste für Zertifikate, die vor Ablauf ihrer Gültigkeit ungültig wurden (z.B. weil der Private Key gestohlen wurde).
+Zertifikate schaffen deshalb eine vertrauenswürdige Zuordnung zwischen Identität und Public Key.
 
-Für Prüfungen ist die Vertrauenskette (Chain of Trust) wichtig: Man vertraut einem Server-Zertifikat nur, weil man der CA vertraut, die es digital signiert hat.
+## Zusammenspiel
+- [[Verschlüsselung (Arten, Symmetrisch, Asymmetrisch, Hybride)]] liefert die Schlüsselbasis.
+- [[Hashverfahren & digitale Signaturen]] erklärt, wie Zertifikate digital signiert werden.
+- [[TLS & SSL]] nutzt Zertifikate zur Serverauthentifizierung.
+- [[DSGVO und IT-Grundschutz (Personbezogene Daten usw..)]] und [[Security by Design]] profitieren von vertrauenswürdiger Kommunikation.
 
-Querverweise: [[Verschlusselung Arten, Symmetrisch, Asymmetrisch, Hybride]], [[Hashverfahren digitale Signaturen]].
+## Eigene Worte (prüfungsnah)
+Ein Zertifikat ist wie ein digitaler Ausweis für einen öffentlichen Schlüssel. Es bestätigt nicht die ganze Sicherheit eines Systems, sondern vor allem: Dieser Public Key gehört zu genau dieser Identität und wurde von einer vertrauenswürdigen Stelle bestätigt.
+
+## Typische Inhalte eines Zertifikats
+| Bestandteil | Bedeutung |
+|---|---|
+| Inhaber / Subject | zu welcher Identität das Zertifikat gehört |
+| Public Key | öffentlicher Schlüssel des Inhabers |
+| Gültigkeitszeitraum | von wann bis wann das Zertifikat gültig ist |
+| Aussteller / Issuer | welche Zertifizierungsstelle es ausgestellt hat |
+| Signatur der CA | Nachweis der Vertrauensbeziehung |
+
+## PKI und Vertrauenskette
+Eine **PKI (Public Key Infrastructure)** umfasst:
+- Root CA
+- Zwischenzertifizierungsstellen
+- Endzertifikate
+- Prüf- und Widerrufsmechanismen
+
+| Bestandteil | Aufgabe |
+|---|---|
+| Root CA | oberste Vertrauensinstanz |
+| Intermediate / Sub CA | stellt Endzertifikate im Auftrag aus |
+| Endzertifikat | Zertifikat für Server, Benutzer oder Dienst |
+
+## Warum vertraut man einem Serverzertifikat?
+Weil die Vertrauenskette geprüft wird:
+1. Das Serverzertifikat ist von einer CA signiert.
+2. Diese CA ist selbst durch eine vertrauenswürdige übergeordnete CA eingebunden.
+3. Am Ende steht eine Root CA, die im System oder Browser als vertrauenswürdig hinterlegt ist.
+
+## Widerruf und Gültigkeit
+Ein Zertifikat kann ungültig sein, obwohl das Enddatum noch nicht erreicht ist, zum Beispiel:
+- Private Key kompromittiert
+- falsche Ausstellung
+- Zertifikat ersetzt
+
+Typische Prüfmechanismen:
+- **CRL** (Certificate Revocation List)
+- **OCSP**
+
+## Typische Prüfungsfallen
+| Irrtum | Korrektur |
+|---|---|
+| Zertifikat = privater Schlüssel | falsch, der private Schlüssel bleibt geheim |
+| Zertifikat verschlüsselt die Daten selbst | falsch, es bestätigt Identität und Public Key |
+| Gültiges Zertifikat heißt automatisch sicheres System | nein, es ist nur ein Baustein |
+
+## Beispielaufgabe mit Lösung
+**Aufgabe:** Warum warnt ein Browser, wenn das Zertifikat einer Webseite abgelaufen ist?
+
+**Lösung:**
+Weil die Vertrauensprüfung fehlschlägt.
+
+**Begründung:**
+Ein Zertifikat ist nur innerhalb seines Gültigkeitszeitraums vertrauenswürdig. Ist es abgelaufen, kann die Identität des Gegenübers nicht mehr regelkonform bestätigt werden.
+
+## Typische Prüfungsszenarien
+- Zertifikat, Public Key und Private Key unterscheiden.
+- PKI und Vertrauenskette erklären.
+- Root CA und Intermediate CA einordnen.
+- Gründe für Zertifikatswarnungen nennen.
+
+## Merksätze
+- Ein Zertifikat bestätigt einen öffentlichen Schlüssel.
+- Der private Schlüssel gehört nicht ins Zertifikat.
+- Vertrauen entsteht über die Zertifikatskette, nicht durch den Schlüssel allein.

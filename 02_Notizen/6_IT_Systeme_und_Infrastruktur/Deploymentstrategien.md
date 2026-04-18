@@ -1,15 +1,66 @@
 # Deploymentstrategien
 
-Unter Deployment (Softwareverteilung / IT-Rollout) versteht man den Prozess, bei dem Software, Updates oder ganze Betriebssysteme (Images) auf Endgeräten oder Servern installiert und konfiguriert werden. Für FISIs ist dies ein typisches Projektthema.
+## Definition
+**Deployment** bezeichnet die Bereitstellung, Verteilung oder Aktualisierung von Software, Diensten oder ganzen Systemständen in Test-, Staging- oder Produktivumgebungen.
 
-**Rollout-Strategien:**
-1. **Big Bang:** Die neue Software wird zu einem festen Stichtag unternehmensweit für alle Nutzer gleichzeitig ausgerollt.
-   - *Vorteil:* Einheitlicher Stand, keine parallelen Altsysteme.
-   - *Nachteil:* Sehr hohes Risiko. Wenn etwas schiefgeht, steht das ganze Unternehmen.
-2. **Iterativ / Phasenweiser Rollout:** Das Deployment erfolgt schrittweise (z. B. Abteilung für Abteilung oder Standort für Standort).
-   - *Vorteil:* Fehler fallen früh auf und betreffen nur eine kleine Gruppe. Geringeres Risiko.
-   - *Nachteil:* Langer Zeitraum, in dem zwei Systeme (Alt und Neu) parallel betreut werden müssen (Schnittstellenprobleme).
+## Warum ist das so?
+Softwareänderungen bringen immer Risiko mit:
+- Fehler im Rollout
+- Ausfälle im Betrieb
+- Inkompatibilitäten
+- Nutzerstörungen
 
-In der modernen Softwareentwicklung (insbesondere in der Cloud) werden weitere Konzepte genutzt, z. B. **Blue/Green-Deployment** (zwei identische Produktivumgebungen, wobei der Traffic nach dem Update einfach auf die aktualisierte "Green"-Umgebung umgeschaltet wird) oder **Canary Releases** (nur ein sehr kleiner Prozentsatz der Nutzer erhält das Update zuerst).
+Darum braucht man Strategien, die Updates kontrolliert, reproduzierbar und möglichst risikoarm in den Betrieb bringen.
 
-Querverweise: [[Virtualisierung Bare-Metal, Hypervisor, Container]], [[Betriebssysteme und Anwendungen]].
+## Zusammenspiel
+- [[2-Tier-, 3-Tier- und Multi-Tier-Architekturen]] bestimmt, welche Schichten deployt werden müssen.
+- [[Virtualisierung (Bare-Metal, Hypervisor, Container)]] erleichtert oft standardisierte Rollouts.
+- [[On-Premises, Cloud, Housing, Hosting sowie IaaS, PaaS und SaaS]] beeinflusst, wie Deployments technisch umgesetzt werden.
+- [[Load Balancing]] ist bei Blue/Green oder Canary oft direkt beteiligt.
+- [[Versionsmanagement (GIT, Repos) des Quellcodes]] dokumentiert Änderungen und bildet oft die Pipeline-Basis.
+
+## Eigene Worte (prüfungsnah)
+Deployment ist nicht einfach "Installation". Es ist der geplante Weg, neue Softwarestände kontrolliert in Betrieb zu bringen, ohne unnötige Ausfälle oder Überraschungen zu erzeugen.
+
+## Klassische Rollout-Strategien
+| Strategie | Beschreibung | Vorteil | Nachteil |
+|---|---|---|---|
+| Big Bang | alle Nutzer/Systeme gleichzeitig umstellen | schneller Wechsel | hohes Risiko |
+| phasenweise / iterativ | schrittweise Einführung | Fehler betreffen kleinere Gruppen | längere Parallelphase |
+
+## Moderne Deployment-Strategien
+| Strategie | Funktionsweise | Typischer Vorteil |
+|---|---|---|
+| Blue/Green | zwei Produktivumgebungen, Umschaltung auf neue Umgebung | schnelles Zurückschalten möglich |
+| Canary | kleine Nutzergruppe erhält neues Release zuerst | Risiken früh erkennbar |
+| Rolling Update | Instanzen nacheinander ersetzen | weniger harter Cut |
+
+## Typische Auswahlkriterien
+| Frage | Bedeutung |
+|---|---|
+| Wie kritisch ist der Dienst? | bestimmt Risikoakzeptanz |
+| Wie leicht kann man zurückrollen? | wichtig bei Fehlern |
+| Gibt es mehrere Instanzen? | relevant für Rolling oder Blue/Green |
+| Wie viele Nutzer sind betroffen? | beeinflusst Pilot-/Canary-Ansatz |
+
+## Beispielaufgabe mit Lösung
+**Aufgabe:** Eine neue Webanwendung soll zuerst nur für 5 % der Nutzer freigeschaltet werden, um Probleme früh zu erkennen. Welche Strategie passt?
+
+**Lösung:**
+**Canary Deployment**
+
+**Begründung:**
+1. Nur ein kleiner Teil der Nutzer erhält die neue Version.
+2. Probleme werden früh sichtbar.
+3. Das Risiko für alle Nutzer ist geringer.
+
+## Typische Prüfungsszenarien
+- Big Bang und phasenweisen Rollout vergleichen.
+- Blue/Green und Canary unterscheiden.
+- erklären, warum Rückfallmöglichkeiten wichtig sind.
+- Deployment von Installation oder Entwicklung abgrenzen.
+
+## Merksätze
+- Deployment ist kontrollierte Bereitstellung, nicht nur Kopieren von Dateien.
+- Je kritischer der Dienst, desto wichtiger sind Risiko- und Rollback-Strategien.
+- Canary testet klein, Blue/Green schaltet um.
