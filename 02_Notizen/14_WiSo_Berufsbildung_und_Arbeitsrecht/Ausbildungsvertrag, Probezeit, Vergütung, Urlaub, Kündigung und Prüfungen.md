@@ -1,12 +1,23 @@
 # Ausbildungsvertrag, Probezeit, Vergütung, Urlaub, Kündigung und Prüfungen
 
 ## Definition
-Der Ausbildungsvertrag regelt Rechte und Pflichten beider Seiten nach BBiG.
+Der Ausbildungsvertrag regelt Inhalte, Dauer, Vergütung, Probezeit und Rechte/Pflichten der Beteiligten.
 
-## Prüfungskern
-- Probezeit mind. 1 Monat, max. 4 Monate
-- Freistellung für Berufsschule/Prüfung
-- Kündigung in Probezeit ohne Frist möglich, danach nur eingeschränkt
+## Warum ist das so?
+Klare vertragliche Regeln schaffen Rechtssicherheit für Azubi und Betrieb.
 
-## Zusammenspiel
-Eng mit [[BRechte und Pflichten von Auszubildenden und Ausbildenden|Rechte und Pflichten von Auszubildenden und Ausbildenden]] und [[Duales System, Aufgaben von Ausbildungsbetrieb, Berufsschule und Kammern]].
+## Prüfungsrelevante Punkte
+| Thema | Typischer Fokus |
+|---|---|
+| Probezeit | verkürzte Kündigungsregeln |
+| Vergütung | angemessen, regelmäßig |
+| Urlaub | gesetzlicher Mindesturlaub |
+| Kündigung | Form, Frist, Grund |
+| Prüfungen | Zulassung, Zwischen-/Abschlussprüfung |
+
+## Beispielaufgabe
+**Frage:** Darf während der Probezeit ohne Frist gekündigt werden?  
+**Lösung:** Ja, grundsätzlich möglich (rechtliche Rahmenbedingungen beachten).
+
+## Querverweise
+[[Duales System, Aufgaben von Ausbildungsbetrieb, Berufsschule und Kammern]] · [[BRechte und Pflichten von Auszubildenden und Ausbildenden]]

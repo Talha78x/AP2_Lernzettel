@@ -1,32 +1,37 @@
 # SLA
 
 ## Definition
-**SLA (Service Level Agreement)** ist die vertragliche Vereinbarung messbarer Serviceziele zwischen Anbieter und Kunde.
+Ein **Service Level Agreement (SLA)** ist eine vertragliche Vereinbarung über messbare Service-Qualität, z. B. Verfügbarkeit, Reaktionszeit, Wiederherstellungszeit und Supportfenster.
 
 ## Warum ist das so?
-Nur gemessene und definierte Qualität ist steuerbar. SLAs klären Erwartungen und Konsequenzen.
+Kunden und IT brauchen klare Erwartungen. Ohne SLA gibt es Streit über „zu langsam“ oder „ausreichend schnell“.
 
 ## Zusammenspiel
-- Messung durch [[Monitoring und SNMP]]
-- Bearbeitung über [[Ticketsysteme]]
-- Einhaltung durch Rollenmodell [[1st-Level, 2nd-Level, 3rd-Level-Support]]
+- Monitoring liefert Messwerte ([[Monitoring und SNMP]]).
+- Ticketsystem erfasst Reaktions- und Lösungszeiten ([[Ticketsysteme]]).
+- Eskalationsstufen werden über Support-Level abgewickelt ([[1st-Level, 2nd-Level, 3rd-Level-Support]]).
 
 ## Typische SLA-Kennzahlen
-| Kennzahl | Beispiel |
-|---|---|
-| Verfügbarkeit | 99,9 % pro Monat |
-| Reaktionszeit | P1 innerhalb 15 Minuten |
-| Wiederherstellungszeit (RTO) | Dienst in 4 Stunden wiederhergestellt |
-| Lösungszeit | P3 innerhalb 2 Arbeitstage |
+| Kennzahl | Bedeutung | Beispiel |
+|---|---|---|
+| Verfügbarkeit | Anteil verfügbarer Zeit | 99,9 %/Monat |
+| Reaktionszeit | Zeit bis Ticketbearbeitung startet | 30 Minuten |
+| Wiederherstellungszeit (MTTR) | Zeit bis Service wieder nutzbar | 4 Stunden |
+| Servicezeit | Zeitfenster der Leistungserbringung | Mo–Fr 8–18 Uhr |
 
-## Rechenbeispiel Verfügbarkeit
-**Aufgabe:** 99,9 % Monatsverfügbarkeit bei 30 Tagen. Wie viel Ausfallzeit ist erlaubt?  
-**Lösung:** 30 Tage = 43.200 Minuten. 0,1 % davon = **43,2 Minuten**.
+## Rechenweg (prüfungsrelevant)
+**Aufgabe:** Monat mit 30 Tagen, SLA 99,5 %. Wie viel Ausfallzeit ist maximal erlaubt?
+
+Gesamtzeit = 30 × 24 × 60 = **43.200 Minuten**  
+Erlaubter Ausfall = 0,5 % von 43.200 = **216 Minuten** (= 3 h 36 min)
 
 ## Eigene Worte
-SLA ist das "Messprotokoll" eines Services: Was, wie schnell und in welcher Qualität geliefert werden muss.
+SLA ist die „Messlatte“ der IT-Leistung. Das SLA definiert **was** erreicht werden soll; SOP und Betrieb definieren **wie**.
 
-## Prüfungsszenarien
-- SLA vs. OLA vs. UC unterscheiden
-- Verfügbarkeit berechnen
-- Prioritäten und Reaktionszeiten zuordnen
+## Typische Prüfungsszenarien
+- Verfügbarkeitsrechnung in Minuten
+- Unterschied OLA/UC/SLA
+- Prioritätsmatrix nach Business-Impact
+
+## Querverweise
+[[Monitoring und SNMP]] · [[Ticketsysteme]] · [[SOP]] · [[Projektcontrolling]]

@@ -2,7 +2,7 @@
 
 ## Betrieb & Monitoring (11)
 - [[Monitoring und SNMP]]
-- [[SIEM usw...]]
+- [[SIEM usw..|SIEM usw...]]
 - [[Ticketsysteme]]
 - [[1st-Level, 2nd-Level, 3rd-Level-Support]]
 - [[Troubleshooting und Härtungsmaßnahmen]]
@@ -26,3 +26,4 @@
 - [[Server und Storage]]
 - [[Virtualisierung (Bare-Metal, Hypervisor, Container)]]
 - [[Backupstrategien (Vollbackup, inkrementell, differentiell, kontinuierlich)]]
+- [[RAID (Arten, Vor- und Nachteile)]]

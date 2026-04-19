@@ -1,10 +1,21 @@
 # Corporate Identity (CI)
 
 ## Definition
-CI ist das einheitliche Selbstbild eines Unternehmens: Kommunikation, Verhalten, Design.
+Corporate Identity beschreibt das einheitliche Selbstbild eines Unternehmens nach innen und außen (Werte, Auftreten, Kommunikation).
 
-## Zusammenspiel
-CI wirkt in Präsentationen, Support-Kommunikation, Webauftritt und Arbeitgebermarke.
+## Warum ist das so?
+Ein konsistenter Auftritt schafft Vertrauen, Wiedererkennung und klare Positionierung.
 
-## Beispiel
-Einheitliche Mail-Signatur, Tonalität im Service und konsistentes Wording stärken Vertrauen.
+## CI-Bausteine
+| Baustein | Inhalt |
+|---|---|
+| Corporate Design | Logo, Farben, Typografie |
+| Corporate Communication | Sprache, Tonalität, Kanäle |
+| Corporate Behavior | Verhalten gegenüber Kunden/Team |
+
+## Beispielaufgabe
+**Frage:** Warum ist widersprüchliche Kommunikation kritisch?  
+**Lösung:** Sie beschädigt Glaubwürdigkeit und Markenwirkung.
+
+## Querverweise
+[[CRM]] · [[Bildbearbeitung, Präsentationstechniken]] · [[Unternehmenswerte, Ethik, Diversity und Gender-Aspekte]]

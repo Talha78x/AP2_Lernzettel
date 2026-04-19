@@ -1,27 +1,36 @@
 # SMART
 
 ## Definition
-**SMART** (Specific, Measurable, Achievable, Relevant, Time-bound) beschreibt Kriterien für gute Ziele und Maßnahmen im IT-Betrieb.
+**S.M.A.R.T. (Self-Monitoring, Analysis and Reporting Technology)** ist ein Diagnosesystem von HDD/SSD zur Früherkennung möglicher Laufwerksausfälle.
 
 ## Warum ist das so?
-Unscharfe Ziele ("Monitoring verbessern") lassen sich nicht bewerten. SMART macht Fortschritt messbar.
+Datenträger fallen oft nicht ohne Vorzeichen aus. SMART-Werte helfen, Risiken rechtzeitig zu erkennen.
 
 ## Zusammenspiel
-SMART-Ziele steuern:
-- Priorisierung in [[Projektplan]]
-- Messung in [[Projektcontrolling]]
-- Servicequalität in [[SLA]]
+- SMART-Daten werden in [[Monitoring und SNMP]] eingebunden.
+- Bei Grenzwertverletzungen entsteht ein Ticket in [[Ticketsysteme]].
+- Präventive Maßnahmen werden per [[SOP]] durchgeführt (Austausch, Backup-Prüfung).
 
-## Beispiel SMART formuliert
-"Die CPU-Auslastungsalarme auf produktiven Datenbankservern werden bis **30.06.2026** so optimiert, dass die **False-Positive-Rate unter 5 %** liegt."
-
-## Eigene Worte
-SMART zwingt dazu, von Wunschdenken auf belastbare Zieldefinition zu wechseln.
+## Wichtige SMART-Indikatoren (typisch)
+| Attribut | Aussage |
+|---|---|
+| Reallocated Sectors | Bereits ersetzte defekte Sektoren |
+| Pending Sectors | Verdächtige, noch nicht remappte Sektoren |
+| Uncorrectable Errors | nicht korrigierbare Lesefehler |
+| Temperature | thermische Belastung |
+| Power-On Hours | Betriebsstunden |
 
 ## Beispielaufgabe
-**Aufgabe:** Ist "Wir machen Tickets schneller" SMART?  
-**Lösung:** Nein. Besser: "Median-Lösungszeit für Priorität-3-Tickets bis 31.08.2026 von 16h auf 10h senken."
+**Aufgabe:** Reallocated Sectors steigen innerhalb 7 Tagen von 5 auf 120. Empfehlung?  
+**Lösung:** Datenträger als kritisch einstufen, zeitnah ersetzen, konsistente Datensicherung und Restore-Test durchführen.
 
-## Prüfungsszenarien
-- Nicht-SMART in SMART umformulieren
-- KPI und Zielwert korrekt kombinieren
+## Eigene Worte
+SMART ist wie ein Verschleißindikator beim Auto: kein 100%-Orakel, aber ein wertvolles Warnsignal.
+
+## Typische Prüfungsszenarien
+- Warum SMART kein Backup ersetzt
+- Präventive Wartung begründen
+- Kritische Attribute nennen
+
+## Querverweise
+[[Backupstrategien (Vollbackup, inkrementell, differentiell, kontinuierlich)]] · [[Monitoring und SNMP]]

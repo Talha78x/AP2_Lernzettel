@@ -1,15 +1,26 @@
 # BGB HGB AGB
 
 ## Definition
-- **BGB**: allgemeines Zivilrecht
-- **HGB**: Sonderrecht für Kaufleute
-- **AGB**: vorformulierte Vertragsbedingungen
+- **BGB**: allgemeines Zivilrecht (Verträge, Willenserklärungen, Pflichtverletzungen)
+- **HGB**: Sonderrecht für Kaufleute/Handelsgeschäfte
+- **AGB**: vorformulierte Vertragsbedingungen, nur wirksam bei wirksamer Einbeziehung
 
 ## Warum ist das so?
-IT-Verträge brauchen klare Regeln zu Leistung, Gewährleistung, Haftung und Fristen.
+Geschäfte brauchen klare Regeln für Vertragsschluss, Haftung, Fristen und Rechte bei Mängeln.
 
 ## Zusammenspiel
-Im B2B-Bereich gelten BGB + HGB; AGB konkretisieren, dürfen aber keine unwirksamen Klauseln enthalten.
+BGB gilt grundsätzlich, HGB ergänzt im Handelsverkehr, AGB konkretisieren Standardfälle – dürfen aber BGB/HGB nicht unzulässig aushebeln.
 
-## Beispielprüfung
-"Wann geht die Gefahr bei Versendung über?" → Im HGB oft früher als im BGB-Verbraucherrecht.
+## Typische Prüfungspunkte
+| Thema | Kernfrage |
+|---|---|
+| Vertragsschluss | Angebot + Annahme? |
+| Mängelrechte | Nacherfüllung, Rücktritt, Minderung, Schadensersatz |
+| AGB-Kontrolle | überraschende/unwirksame Klauseln? |
+
+## Beispielaufgabe
+**Aufgabe:** AGB schließen jegliche Haftung auch bei Vorsatz aus. Wirksam?  
+**Lösung:** Nein, regelmäßig unwirksam.
+
+## Querverweise
+[[Unlauter Wettbewerb]] · [[Kosten-Nutzen-Betrachtung]]

@@ -1,36 +1,36 @@
 # SIEM usw...
 
 ## Definition
-**SIEM (Security Information and Event Management)** sammelt, korreliert und bewertet Sicherheitsereignisse aus vielen Quellen (Logs, Firewalls, AD, EDR, Cloud), um Angriffe schneller zu erkennen.
+**SIEM (Security Information and Event Management)** sammelt, korreliert und bewertet sicherheitsrelevante Logs aus vielen Quellen, um Angriffe früh zu erkennen.
 
 ## Warum ist das so?
-Einzelne Logs zeigen nur Ausschnitte. Ein Angriff wird oft erst sichtbar, wenn mehrere Ereignisse kombiniert werden (z. B. Login-Fehler + neuer Admin + Datenabfluss).
+Einzelne Logeinträge wirken harmlos. Erst durch Korrelation wird ein Angriffsmuster sichtbar (z. B. viele Fehlanmeldungen + verdächtige Admin-Aktion).
 
-## Zusammenspiel im Betrieb
-- Logquellen aus Infrastruktur, Anwendungen und Identity-Systemen
-- Normalisierung der Daten in ein gemeinsames Schema
-- Korrelation (Regeln/Use Cases), z. B. "5 Fehlanmeldungen + erfolgreicher Login aus neuem Land"
-- Alarmierung und Übergabe in [[Ticketsysteme]] / SOC-Prozess
-- Nachbearbeitung in [[SOP]] und [[Troubleshooting und Härtungsmaßnahmen]]
+## Zusammenspiel
+- Datenquellen: Firewall, AD, Endpoint, Cloud, IDS/IPS.
+- Monitoring meldet technische Ausfälle, SIEM bewertet Sicherheitsrisiken.
+- Bei Vorfall: Ticket + Eskalation + Maßnahmen aus [[Troubleshooting und Härtungsmaßnahmen]].
 
-## SIEM, SOAR, XDR (Abgrenzung)
-| Begriff | Fokus |
+## SIEM-Bausteine
+| Baustein | Funktion |
 |---|---|
-| SIEM | Sammeln + Korrelation + Alarmierung |
-| SOAR | Automatisierte Reaktion (Playbooks) |
-| XDR | Erweiterte Erkennung über Endpoint/Netzwerk/Cloud |
+| Log-Ingestion | Einsammeln und Normalisieren |
+| Korrelation | Regeln über mehrere Quellen |
+| Alerting | Alarm nach Schweregrad |
+| Dashboards | Lagebild/Trends |
+| Forensik | Suche nach IOC/Timeline |
+
+## Beispiel-Prüfungsfall
+**Aufgabe:** Ein Benutzerkonto hat 200 fehlgeschlagene Logins aus mehreren Ländern und danach erfolgreichen Admin-Login. Wie bewerten?  
+**Lösung:** Sehr hoher Verdacht auf Account-Kompromittierung → Incident eröffnen, Konto sperren, MFA-Status prüfen, Logins forensisch auswerten.
 
 ## Eigene Worte
-SIEM ist die "Sicherheitszentrale" für Logdaten: Es reduziert Rauschen, priorisiert relevante Vorfälle und schafft Revisionssicherheit.
+SIEM ist kein „magisches Tool“, sondern ein Frühwarnsystem. Gute Regeln + gute Datenqualität entscheiden über Nutzen.
 
-## Beispielaufgabe
-**Aufgabe:** Warum ist ein SIEM ohne Zeit-Synchronisation problematisch?  
-**Lösung:** Ohne einheitliche Zeitstempel können Ereignisse nicht korrekt korreliert werden. Ursache-Wirkung wird unklar.
-
-## Prüfungsszenarien
-- SIEM-Ziele nennen (Erkennung, Nachvollziehbarkeit, Compliance)
-- False Positive vs. False Negative erklären
-- Korrelation an einem Beispiel erläutern
+## Typische Prüfungsszenarien
+- SIEM vs. Monitoring unterscheiden
+- False Positive / False Negative erklären
+- Reaktionskette bei Security Alert beschreiben
 
 ## Querverweise
-[[Monitoring und SNMP]] · [[SOP]] · [[SLA]] · [[Hashverfahren & digitale Signaturen]]
+[[Monitoring und SNMP]] · [[Ticketsysteme]] · [[Grundlagen der IT-Sicherheit im beruflichen Alltag]]

@@ -1,37 +1,40 @@
 # Ticketsysteme
 
 ## Definition
-Ein **Ticketsystem** erfasst, priorisiert, verfolgt und dokumentiert Anfragen, Incidents, Problems und Changes.
+Ein Ticketsystem ist das zentrale Werkzeug zur strukturierten Erfassung, Priorisierung, Bearbeitung und Dokumentation von Supportfällen.
 
 ## Warum ist das so?
-Ohne Ticket gehen Informationen verloren, Zuständigkeiten sind unklar, SLA-Nachweise fehlen.
+Ohne Ticketing gehen Informationen verloren, Verantwortlichkeiten sind unklar und SLA-Nachweise fehlen.
 
 ## Zusammenspiel
-- Eingang über Portal, Mail, Telefon
-- Klassifizierung (Incident, Request, Change)
-- Priorisierung (Impact x Urgency)
-- Bearbeitung durch Support-Level
-- Abschluss mit Dokumentation/Wissensdatenbank
+- Alarme aus [[Monitoring und SNMP]] erzeugen Tickets.
+- Priorität steuert die Bearbeitungsreihenfolge.
+- Übergabe zwischen [[1st-Level, 2nd-Level, 3rd-Level-Support]] erfolgt nachvollziehbar.
+- Abschlussdokumentation verbessert künftige [[SOP]].
 
-## Priorisierung (vereinfacht)
-| Auswirkung (Impact) | Dringlichkeit (Urgency) | Priorität |
-|---|---|---|
-| hoch | hoch | P1 |
-| hoch | mittel | P2 |
-| mittel | mittel | P3 |
-| gering | gering | P4 |
+## Ticket-Lebenszyklus
+| Status | Zweck |
+|---|---|
+| Neu | Eingang erfasst |
+| In Bearbeitung | Analyse läuft |
+| Warten auf Kunde | Rückfrage/Bestätigung offen |
+| Eskaliert | Übergabe an höheren Level |
+| Gelöst | Lösung umgesetzt |
+| Geschlossen | Kunde bestätigt/Frist abgelaufen |
 
-## Eigene Worte
-Ein Ticket ist nicht nur "Aufgabe", sondern die rechtssichere Historie eines Vorfalls.
+## Priorisierung (typisch)
+**Priorität = Auswirkung × Dringlichkeit**
+- Hohe Auswirkung + hohe Dringlichkeit = P1
+- Geringe Auswirkung + geringe Dringlichkeit = P4
 
 ## Beispielaufgabe
-**Aufgabe:** 200 User ohne E-Mail, CEO betroffen. Priorität?  
-**Lösung:** P1/Major Incident wegen hoher Auswirkung und hoher Dringlichkeit.
+**Aufgabe:** VPN-Ausfall für alle Standorte um 08:00 Uhr. Einzelnutzer-Druckerproblem um 08:05 Uhr. Welche Reihenfolge?  
+**Lösung:** VPN zuerst (hohe Auswirkung, hohe Dringlichkeit), Drucker danach.
 
-## Prüfungsszenarien
-- Incident vs. Problem vs. Change
-- Pflichtfelder eines Tickets nennen
-- Eskalationswege erklären
+## Typische Prüfungsszenarien
+- Incident/Service Request unterscheiden
+- Pflichtfelder im Ticket nennen
+- SLA-Zeitmessung im Ticketfluss erklären
 
 ## Querverweise
-[[1st-Level, 2nd-Level, 3rd-Level-Support]] · [[SLA]] · [[SOP]]
+[[SLA]] · [[SOP]] · [[Troubleshooting und Härtungsmaßnahmen]]

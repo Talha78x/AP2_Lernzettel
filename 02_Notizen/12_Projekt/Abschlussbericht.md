@@ -1,17 +1,24 @@
 # Abschlussbericht
 
 ## Definition
-Der Abschlussbericht fasst Projektergebnis, Zielerreichung, Abweichungen, Risiken und Lessons Learned zusammen.
+Der Abschlussbericht dokumentiert Zielerreichung, Ergebnisse, Abweichungen, Wirtschaftlichkeit, Risiken und Empfehlungen nach Projektende.
 
 ## Warum ist das so?
-Er liefert Nachweis für Abnahme, Wissenstransfer und Verbesserungen für Folgeprojekte.
+Ohne sauberen Abschluss gehen Wissen, Nachweise und Lernpunkte verloren.
 
-## Aufbau
-1. Ausgangslage und Ziele
-2. Umgesetzte Lösung
-3. Soll-Ist-Vergleich (Zeit/Kosten/Qualität)
-4. Risiken/Probleme + Maßnahmen
-5. Fazit und Ausblick
+## Zusammenspiel
+Input aus [[Projektcontrolling]], Testprotokollen, Abnahme, Kostenübersicht und Betriebserfahrungen.
 
-## Prüfungsszenario
-Eine gute Doku benennt nicht nur Erfolg, sondern auch Abweichungen und Begründungen.
+## Typische Inhalte
+- Ziel/Soll-Ist-Vergleich
+- Termin- und Budgetbewertung
+- Qualitätsnachweise
+- Risiken und Lessons Learned
+- Übergabe an Betrieb (SOP, Support, SLA)
+
+## Beispielaufgabe
+**Frage:** Warum sind „Lessons Learned“ prüfungsrelevant?  
+**Lösung:** Sie zeigen Reflexionsfähigkeit und verbessern Folgeprojekte systematisch.
+
+## Querverweise
+[[Projektcontrolling]] · [[SOP]] · [[Ticketsysteme]]

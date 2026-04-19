@@ -1,10 +1,21 @@
 # Weiterbildung, Umschulung, Fördermaßnahmen, Karriereplanung und Existenzgründung
 
 ## Definition
-Lebenslanges Lernen sichert Beschäftigungsfähigkeit in einem sich schnell ändernden IT-Markt.
+Diese Themen beschreiben berufliche Entwicklung von Qualifizierung bis Selbstständigkeit.
 
-## Beispielpfad
-1. Skill-Gap analysieren
-2. Zertifizierung/Förderung wählen
-3. Lernplan mit SMART-Zielen
-4. Fortschritt im Portfolio dokumentieren
+## Warum ist das so?
+Berufsbilder in IT ändern sich schnell; kontinuierliches Lernen sichert Beschäftigungsfähigkeit.
+
+## Karriereplanung (kompakt)
+1. Standort bestimmen (Skills, Interessen)
+2. Zielrolle definieren (z. B. Admin, Security, DevOps)
+3. Qualifikationslücken schließen
+4. Zeit- und Finanzplan aufstellen
+5. Fortschritt prüfen und anpassen
+
+## Beispielaufgabe
+**Frage:** Warum reicht „nur Erfahrung“ langfristig oft nicht aus?  
+**Lösung:** Technologien und Standards ändern sich; formale Weiterbildungen + Praxis erhöhen Marktwert.
+
+## Querverweise
+[[Duales System, Aufgaben von Ausbildungsbetrieb, Berufsschule und Kammern]] · [[Projektplan]]

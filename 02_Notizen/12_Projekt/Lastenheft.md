@@ -1,20 +1,22 @@
 # Lastenheft
 
 ## Definition
-Das **Lastenheft** beschreibt aus Kundensicht **was** und **warum** geliefert werden soll.
+Das Lastenheft beschreibt aus Sicht des Auftraggebers **was** und **warum** geliefert werden soll.
 
 ## Warum ist das so?
-Der Auftraggeber definiert Ziele und Anforderungen, ohne die technische Umsetzung vorzugeben.
+Der Auftraggeber formuliert Anforderungen fachlich; der Auftragnehmer übersetzt sie später technisch ins [[Pflichtenheft]].
 
-## Zusammenspiel
-Lastenheft (Kunde) → Pflichtenheft (Auftragnehmer) → Umsetzung im [[Projektplan]].
+## Typische Inhalte
+| Abschnitt | Inhalt |
+|---|---|
+| Ausgangslage | Problem, Zielbild |
+| Muss-/Kann-Anforderungen | Priorisierte Erwartungen |
+| Rahmenbedingungen | Budget, Termine, Compliance |
+| Abnahmekriterien | Wann gilt das Ziel als erreicht? |
 
-## Inhalte
-- Ausgangssituation / Ziele
-- Muss-/Kann-Anforderungen
-- Rahmenbedingungen
-- Abnahmekriterien
+## Beispielaufgabe
+**Frage:** „System muss täglich automatisch sichern“ – Lastenheft oder Pflichtenheft?  
+**Lösung:** Lastenheft (fachliche Anforderung). Die konkrete Umsetzung (Tool, Zeitfenster, Skript) gehört ins Pflichtenheft.
 
-## Beispiel
-**Anforderung:** "System muss 200 gleichzeitige Benutzer unterstützen."  
-Das ist eine Lastenheft-Anforderung, noch keine technische Lösung.
+## Querverweise
+[[Pflichtenheft]] · [[Projektplan]] · [[Abschlussbericht]]

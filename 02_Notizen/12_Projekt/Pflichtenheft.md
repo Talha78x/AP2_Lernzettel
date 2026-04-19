@@ -1,21 +1,24 @@
 # Pflichtenheft
 
 ## Definition
-Das **Pflichtenheft** beschreibt aus Auftragnehmersicht **wie** die Anforderungen des Lastenhefts umgesetzt werden.
+Das Pflichtenheft beschreibt aus Sicht des Auftragnehmers **wie** die Anforderungen aus dem Lastenheft umgesetzt werden.
 
 ## Warum ist das so?
-Es schafft Verbindlichkeit für Architektur, Schnittstellen, Tests und Abnahme.
+Technische Konkretisierung verhindert Missverständnisse in Entwicklung, Test und Abnahme.
 
 ## Zusammenspiel
-[[Lastenheft]] liefert Anforderungen, Pflichtenheft konkretisiert Umsetzung, Tests und Lieferobjekte.
+Lastenheft (Was) → Pflichtenheft (Wie) → Umsetzung → Test/Abnahme → [[Abschlussbericht]].
 
-## Inhalte
-| Bereich | Beispiel |
-|---|---|
-| Architektur | 3-Tier-Anwendung mit Reverse Proxy |
-| Schnittstellen | REST-API mit OAuth2 |
-| Qualität | Antwortzeit < 300 ms |
-| Test/Abnahme | Lasttest mit 200 Usern |
+## Typische Inhalte
+- Systemarchitektur
+- Technologien/Schnittstellen
+- Testkonzept und Abnahmekriterien
+- Risiken und Annahmen
+- Lieferumfang und Ausschlüsse
 
 ## Beispielaufgabe
-Wenn im Lastenheft "hohe Verfügbarkeit" steht, konkretisiert das Pflichtenheft z. B. "99,9 % Verfügbarkeit, redundanter LB".
+**Aufgabe:** Lastenheft fordert 99,9 % Verfügbarkeit. Was muss im Pflichtenheft stehen?  
+**Lösung:** Konkrete technische Maßnahmen (Redundanz, Monitoring, Alerting, Wartungsfenster) und Messmethode.
+
+## Querverweise
+[[Lastenheft]] · [[SLA]] · [[Projektcontrolling]]

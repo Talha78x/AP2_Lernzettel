@@ -1,24 +1,29 @@
 # Was macht ein Projekt aus?
 
 ## Definition
-Ein **Projekt** ist ein einmaliges, zeitlich befristetes Vorhaben mit klarem Ziel, begrenzten Ressourcen und einem definierten Ergebnis.
+Ein Projekt ist ein **einmaliges, zielgerichtetes Vorhaben** mit begrenzter Zeit, begrenztem Budget und klarer Organisation.
 
 ## Warum ist das so?
-Regelbetrieb ist wiederholbar; Projekte sind neuartig und mit höherem Risiko verbunden. Deshalb braucht es Planung, Steuerung und Abschluss.
+Projekte lösen Veränderungen (neues System, Migration, Prozessumbau), die nicht als Routinebetrieb laufen können.
 
 ## Zusammenspiel
-- Ziele konkretisieren im [[Lastenheft]] und [[Pflichtenheft]]
-- Umsetzung steuern über [[Projektplan]] und [[Projektcontrolling]]
-- Abschluss sichern im [[Abschlussbericht]]
+Projektarbeit verbindet Ziel, Scope, Ressourcen und Risiken. Ergebnisse gehen später in den Betrieb über (z. B. SOP, SLA, Support).
 
-## Projektmerkmale (typisch AP2)
+## Projektmerkmale (prüfungsnah)
 | Merkmal | Bedeutung |
 |---|---|
-| Einmaligkeit | kein Routinethema |
-| Zielvorgabe | messbares Ergebnis |
-| Begrenzung | Zeit, Budget, Personal |
-| Komplexität | Abstimmung mehrerer Stakeholder |
+| Einmaligkeit | Kein Standard-Tagesgeschäft |
+| Zielorientierung | Definierter Soll-Zustand |
+| Begrenzung | Zeit, Budget, Personal begrenzt |
+| Komplexität | Mehrere Abhängigkeiten/Risiken |
+| Organisation | Rollen, Verantwortung, Kommunikation |
+
+## Magisches Dreieck
+**Zeit – Kosten – Leistung/Qualität** stehen in Wechselwirkung. Änderung an einer Ecke beeinflusst die anderen.
 
 ## Beispielaufgabe
-**Frage:** "Server monatlich patchen" – Projekt oder Prozess?  
-**Lösung:** Prozess (wiederkehrend). Einmalige Einführung eines neuen Patch-Tools wäre Projekt.
+**Aufgabe:** Kunde fordert zusätzlichen Funktionsumfang, Termin bleibt gleich. Was ist die Folge?  
+**Lösung:** Entweder höhere Kosten/Ressourcen oder Qualitäts-/Scope-Anpassung. Alles gleichzeitig geht nicht.
+
+## Querverweise
+[[Projektplan]] · [[Ressourcenplanung]] · [[Projektcontrolling]]

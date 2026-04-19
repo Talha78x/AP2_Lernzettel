@@ -39,3 +39,8 @@
 - [[Unternehmenswerte, Ethik, Diversity und Gender-Aspekte]]
 - [[Wertschätzende Zusammenarbeit, Interdisziplinarität und Interkulturalität]]
 - [[Weiterbildung, Umschulung, Fördermaßnahmen, Karriereplanung und Existenzgründung]]
+
+## Querbezüge in die Technik
+- [[SLA]]
+- [[Projektcontrolling]]
+- [[Ticketsysteme]]
