@@ -1,14 +1,24 @@
 # Ressourcenplanung
 
 ## Definition
-Ressourcenplanung ordnet Personal, Budget, Hardware/Software und Zeit den Arbeitspaketen zu.
+Ressourcenplanung ordnet Personal, Zeit, Budget, Räume, Software und Hardware den Arbeitspaketen zu.
 
 ## Warum ist das so?
-Gute Planung vermeidet Überlastung, Engpässe und Leerlauf.
+Ein guter Terminplan scheitert ohne verfügbare Ressourcen.
 
 ## Zusammenspiel
-Ressourcen beeinflussen direkt [[Projektplan]] und [[Projektcontrolling]].
+Sie ergänzt [[Projektplan]] und wird über [[Projektcontrolling]] laufend angepasst.
 
-## Beispielrechnung
-2 Admins á 50 % Verfügbarkeit, Projektlaufzeit 4 Wochen à 40h/Woche:  
-Gesamtstunden = 2 × 0,5 × 4 × 40 = **160 Stunden**.
+## Methoden
+| Methode | Nutzen |
+|---|---|
+| Kapazitätsabgleich | Über-/Unterlast erkennen |
+| Skill-Matrix | passende Kompetenzen zuordnen |
+| Reserven/Puffer | Ausfälle abfangen |
+
+## Beispielaufgabe
+**Aufgabe:** Zwei kritische Pakete brauchen denselben Spezialisten gleichzeitig. Lösung?  
+**Lösung:** Priorisieren, umplanen, Wissenstransfer oder externen Support einplanen.
+
+## Querverweise
+[[Projektplan]] · [[Netzplan, Gannt-Diagramm, Meilenstein]]

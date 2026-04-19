@@ -1,10 +1,24 @@
 # Unlauter Wettbewerb
 
 ## Definition
-Unlauterer Wettbewerb sind unfaire geschäftliche Handlungen (Irreführung, aggressive Werbung, Rufausnutzung).
+Unlauterer Wettbewerb sind unfaire geschäftliche Handlungen (z. B. Irreführung, aggressive Werbung), die gegen das UWG verstoßen.
 
-## Warum relevant für IT?
-Landingpages, Preisvergleich, E-Mail-Marketing und Produktclaims können rechtliche Risiken erzeugen.
+## Warum ist das so?
+Fairer Wettbewerb schützt Verbraucher und seriöse Unternehmen.
 
-## Beispiel
-"100 % sicher" als Sicherheitsversprechen ist oft irreführend und rechtlich riskant.
+## Zusammenspiel
+Marketing, Vertrieb und [[Corporate Identity (CI)]] müssen rechtssicher geplant werden.
+
+## Beispiele
+| Unlauter | Warum problematisch |
+|---|---|
+| Irreführende Preisangaben | Täuschung der Kunden |
+| Fake-Bewertungen | Manipulation der Kaufentscheidung |
+| Vergleichende Herabsetzung | unzulässige Rufschädigung |
+
+## Beispielaufgabe
+**Frage:** „Nur heute 90 % Rabatt“, Aktion läuft seit Wochen. Zulässig?  
+**Lösung:** Nein, irreführende Geschäftspraktik.
+
+## Querverweise
+[[CRM]] · [[Corporate Identity (CI)]]

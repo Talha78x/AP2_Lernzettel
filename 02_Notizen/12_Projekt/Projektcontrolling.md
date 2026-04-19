@@ -1,21 +1,25 @@
 # Projektcontrolling
 
 ## Definition
-Projektcontrolling vergleicht Plan- und Ist-Werte, erkennt Abweichungen und steuert Gegenmaßnahmen.
+Projektcontrolling überwacht Soll-Ist-Abweichungen bei Termin, Kosten, Qualität und Umfang und leitet Gegenmaßnahmen ein.
 
 ## Warum ist das so?
-Projekte driften sonst bei Zeit, Budget und Qualität.
+Frühe Korrektur ist günstiger als späte Rettung.
 
 ## Zusammenspiel
-KPIs aus [[SMART]] + Terminstatus aus [[Projektplan]] + Budgetstatus aus Kostenplanung.
+Datenquellen: Projektplan, Aufwandserfassung, Risiko-Log, Qualitätskennzahlen. Ergebnisse fließen in Stakeholder-Berichte.
 
-## Typische Kennzahlen
-| KPI | Zweck |
+## Kennzahlen (prüfungsnah)
+| Kennzahl | Bedeutung |
 |---|---|
+| SPI | Terminleistung |
+| CPI | Kostenleistung |
 | Fertigstellungsgrad | Fortschritt |
-| Plan-Ist-Kosten | Budgetkontrolle |
-| Meilensteintreue | Terminsteuerung |
-| Fehlerrate | Qualitätskontrolle |
+| Defect Rate | Qualitätsindikator |
 
 ## Beispielaufgabe
-Ist-Aufwand 120 h statt 90 h geplant (AP1). Abweichung: +30 h bzw. +33,3 %. Maßnahme: Umfang reduzieren oder Ressourcen erhöhen.
+**Aufgabe:** Geplante Kosten 50.000 €, Istkosten 60.000 € bei gleichem Fortschritt. Bewertung?  
+**Lösung:** Kostenabweichung negativ (Budgetüberschreitung), Maßnahmen: Scope prüfen, Ressourcen optimieren, Risiken neu bewerten.
+
+## Querverweise
+[[Projektplan]] · [[Abschlussbericht]] · [[SLA]]

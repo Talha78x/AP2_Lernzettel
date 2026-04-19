@@ -1,38 +1,44 @@
 # Troubleshooting und Härtungsmaßnahmen
 
 ## Definition
-**Troubleshooting** ist strukturierte Fehleranalyse. **Härtung** reduziert die Angriffsfläche eines Systems.
+**Troubleshooting** ist die systematische Fehleranalyse und -behebung.  
+**Härtung** (Hardening) reduziert Angriffsflächen durch sichere Konfigurationen.
 
 ## Warum ist das so?
-Ungeplante Ausfälle sind teuer; Sicherheitslücken werden aktiv ausgenutzt. Beides wird durch Standards und Methodik beherrschbar.
+Fehlerbehebung allein reicht nicht: Ohne Härtung kommen Störungen oder Angriffe häufig zurück.
 
-## Zusammenspiel (Ablauf)
-1. Störung erkennen ([[Monitoring und SNMP]])
-2. Betroffene Systeme eingrenzen
-3. Hypothesen prüfen (Logs, Pakete, Konfiguration)
-4. Workaround + Root-Cause beheben
-5. Härtungsmaßnahmen ergänzen, damit der Fehler nicht wiederkehrt
+## Zusammenspiel
+- Startpunkt meist Alarm aus [[Monitoring und SNMP]] oder Incident im [[Ticketsysteme]].
+- Analyse entlang OSI-Schichten (Physik → Anwendung).
+- Nach Behebung: Hardening, Dokumentation in [[SOP]], Lessons Learned.
 
-## Härtungs-Checkliste
-| Bereich | Maßnahme |
+## Troubleshooting-Methodik
+| Schritt | Inhalt |
 |---|---|
-| Accounts | MFA, least privilege, starke Policies |
-| Dienste | Unnötige Services deaktivieren |
-| Netzwerk | Segmentierung, ACL, sichere Protokolle |
-| OS | Patchen, sichere Baselines, Logging |
-| Anwendung | Eingabevalidierung, Secrets-Management |
+| Eingrenzen | Wer ist betroffen? Seit wann? |
+| Hypothese | Plausible Ursache formulieren |
+| Test | Messung/Log-Prüfung/Change-Rollback |
+| Fix | Kleinster wirksamer Eingriff |
+| Verifikation | Funktion + Nebenwirkungen prüfen |
 
-## Eigene Worte
-Troubleshooting beantwortet: "Warum ist es kaputt?" – Härtung beantwortet: "Wie verhindern wir den nächsten Vorfall?"
+## Härtungsmaßnahmen (Beispiele)
+- Unnötige Dienste deaktivieren
+- Patchstand aktuell halten
+- MFA/Passwortrichtlinien erzwingen
+- Least-Privilege/Rollenkonzepte
+- Logging und SIEM-Anbindung
 
 ## Beispielaufgabe
-**Aufgabe:** Webdienst nicht erreichbar, Ping funktioniert. Nenne den nächsten sinnvollen Prüfschritt.  
-**Lösung:** Dienst- und Portprüfung (z. B. `ss -tulpen`, Reverse Proxy, Firewall-Regel). Netz ist erreichbar, also liegt der Fehler eher auf Transport-/Anwendungsebene.
+**Aufgabe:** Webdienst antwortet langsam. CPU normal, aber DB-Latenz hoch. Was tun?  
+**Lösung:** Ursache in DB-Pfad prüfen (Index, Locking, IO), nicht blind Webserver skalieren.
 
-## Prüfungsszenarien
-- OSI-basiertes Troubleshooting darstellen
-- Hardening von Linux/Windows beispielhaft nennen
-- Root Cause vs. Symptom trennen
+## Eigene Worte
+Gutes Troubleshooting arbeitet datenbasiert statt nach Bauchgefühl. Hardening macht aus einer „reparierten“ eine „robuste“ Umgebung.
+
+## Typische Prüfungsszenarien
+- OSI-orientierte Fehlersuche
+- Quick Fix vs. nachhaltige Maßnahme
+- Dokumentationspflicht nach Incident
 
 ## Querverweise
-[[SOP]] · [[SIEM usw...]] · [[Standardprotokolle (TCP, UDP, MAC, ARP, ICMP, HTTP, HTTPS, FTP, SMTP...)]]
+[[SOP]] · [[SIEM usw..|SIEM usw...]] · [[SLA]]

@@ -1,32 +1,37 @@
 # SOP
 
 ## Definition
-**SOP (Standard Operating Procedure)** ist eine verbindliche Schritt-für-Schritt-Arbeitsanweisung für wiederkehrende Betriebsprozesse.
+Eine **SOP (Standard Operating Procedure)** ist eine verbindliche Schritt-für-Schritt-Anweisung für wiederkehrende Betriebsaufgaben.
 
 ## Warum ist das so?
-SOPs reduzieren Fehler, machen Qualität reproduzierbar und sind für Audits/Übergaben essenziell.
+Wiederholbare Qualität, geringere Fehlerquote und schnellere Einarbeitung funktionieren nur mit klar dokumentierten Standards.
 
 ## Zusammenspiel
-- Wird in [[Ticketsysteme]] als Standardlösung hinterlegt
-- Definiert Reaktionswege nach [[SLA]]
-- Ergänzt durch Runbooks für Störungen und Changes
+- SOPs stützen die Arbeit im [[1st-Level, 2nd-Level, 3rd-Level-Support]].
+- Bei Incidents liefern SOPs Erstmaßnahmen für [[Troubleshooting und Härtungsmaßnahmen]].
+- Einhaltung kann gegen [[SLA]] gemessen werden.
 
-## Aufbau einer guten SOP
-1. Zweck und Geltungsbereich
-2. Voraussetzungen / Verantwortlichkeiten
-3. Exakte Arbeitsschritte
-4. Prüfkriterien (Done-Kriterien)
-5. Dokumentation/Nachweis
-6. Rollback/Notfallplan
-
-## Eigene Worte
-Eine SOP ist wie ein Rezept: Wenn alle denselben Ablauf nutzen, ist das Ergebnis stabil – auch bei Schichtwechsel oder Urlaubsvertretung.
+## Mindestbestandteile einer guten SOP
+| Baustein | Inhalt |
+|---|---|
+| Ziel & Scope | Wofür gilt die SOP? |
+| Voraussetzungen | Rechte, Tools, Wartungsfenster |
+| Ablauf | Konkrete Schritte mit Reihenfolge |
+| Kontrollpunkte | Wie wird Erfolg geprüft? |
+| Rollback | Was tun bei Fehlschlag? |
+| Dokumentation | Ticket, Änderungsprotokoll, Nachweis |
 
 ## Beispielaufgabe
-**Aufgabe:** Warum gehört ein Rollback in jede Change-SOP?  
-**Lösung:** Weil Änderungen fehlschlagen können. Rollback begrenzt Ausfallzeit und Business-Risiko.
+**Frage:** Warum braucht eine Patch-SOP einen Rollback-Teil?  
+**Lösung:** Weil Updates fehlschlagen können. Ohne Rollback steigt Ausfallzeit, SLA-Verstoß droht.
 
-## Prüfungsszenarien
-- SOP vs. Richtlinie vs. Prozess erklären
-- Mindestinhalte einer SOP aufzählen
-- Nutzen für Qualität und Compliance begründen
+## Eigene Worte
+SOPs sind wie ein Kochrezept für den Betrieb: Ohne Rezept kann ein Gericht gelingen – aber nicht verlässlich und nicht bei jedem Teammitglied gleich gut.
+
+## Typische Prüfungsszenarien
+- Aufbau einer SOP beschreiben
+- SOP vs. Richtlinie (Policy) unterscheiden
+- Change-Prozess mit SOP erklären
+
+## Querverweise
+[[SLA]] · [[Ticketsysteme]] · [[Troubleshooting und Härtungsmaßnahmen]]

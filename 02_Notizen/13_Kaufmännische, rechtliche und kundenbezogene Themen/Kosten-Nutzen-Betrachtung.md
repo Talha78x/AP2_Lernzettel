@@ -1,13 +1,26 @@
 # Kosten-Nutzen-Betrachtung
 
 ## Definition
-Vergleich von monetären/qualitativen Kosten und Nutzen einer Maßnahme.
+Die Kosten-Nutzen-Betrachtung vergleicht monetäre und nicht-monetäre Aufwände mit dem erwarteten Nutzen einer Maßnahme.
 
-## Rechenweg (einfach)
-ROI = (Nutzen - Kosten) / Kosten
+## Warum ist das so?
+Ressourcen sind begrenzt. Entscheidungen müssen wirtschaftlich begründet werden.
 
-## Beispiel
-Kosten 20.000 €, jährlicher Nutzen 30.000 €: ROI = (30.000-20.000)/20.000 = 0,5 = 50 %.
+## Zusammenspiel
+Nutzenargumentation ist wichtig für [[Projektplan]], [[Projektcontrolling]] und Management-Entscheidungen.
 
-## Prüfungsszenario
-Auch qualitative Effekte nennen (Sicherheit, Reputation, Mitarbeiterzufriedenheit).
+## Rechenwege
+| Kennzahl | Formel |
+|---|---|
+| Gewinn | Erlöse - Kosten |
+| ROI | (Gewinn / Investition) × 100 |
+| Amortisationsdauer | Investition / jährlicher Rückfluss |
+
+## Beispielaufgabe mit Rechenweg
+Investition: 20.000 €  
+Jährliche Einsparung: 8.000 €
+
+Amortisationsdauer = 20.000 / 8.000 = **2,5 Jahre**
+
+## Querverweise
+[[Produktivität, Wirtschaftlichkeit, Rentabilität und Zielkonflikte]] · [[Projektcontrolling]]

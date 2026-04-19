@@ -1,17 +1,30 @@
 # Netzplan, Gannt-Diagramm, Meilenstein
 
 ## Definition
-- **Netzplan**: logische Abhängigkeiten und kritischer Pfad
-- **Gantt-Diagramm**: Zeitachse der Arbeitspakete
-- **Meilenstein**: wichtiger Kontrollpunkt ohne Dauer
+- **Netzplan**: zeigt logische Abhängigkeiten und kritischen Pfad.
+- **Gantt-Diagramm**: visualisiert Arbeitspakete auf einer Zeitachse.
+- **Meilenstein**: wichtiger Ereignispunkt ohne Dauer.
 
 ## Warum ist das so?
-Abhängigkeiten entscheiden, welche Verzögerung das Gesamtprojekt gefährdet.
+Termintreue hängt nicht nur von Dauer ab, sondern von Abhängigkeiten.
 
 ## Zusammenspiel
-Netzplan findet den kritischen Pfad, Gantt visualisiert Termine, Meilensteine dienen als Management-Entscheidungspunkte.
+Netzplan findet die Engstelle, Gantt macht sie sichtbar, Meilensteine dienen als Management-Checkpoints.
 
-## Beispiel (vereinfacht)
-A (2T) → B (3T) → D (2T)  
-A (2T) → C (4T) → D (2T)  
-Kritischer Pfad: A-C-D = 8 Tage.
+## Beispiel mit Rechenweg
+A(2T) → B(3T) → D(2T)  
+A(2T) → C(4T) → D(2T)
+
+Pfade:
+- A-B-D = 2+3+2 = **7 Tage**
+- A-C-D = 2+4+2 = **8 Tage**
+
+**Kritischer Pfad:** A-C-D (8 Tage)
+
+## Typische Prüfungsszenarien
+- Kritischen Pfad berechnen
+- Pufferzeit erklären
+- Unterschied Vorgang vs. Meilenstein
+
+## Querverweise
+[[Projektplan]] · [[Projektcontrolling]] · [[Ressourcenplanung]]

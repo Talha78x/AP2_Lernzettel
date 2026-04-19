@@ -1,21 +1,26 @@
 # Projektplan
 
 ## Definition
-Der **Projektplan** strukturiert Arbeitspakete, Termine, Abhängigkeiten, Ressourcen, Kosten und Risiken.
+Der Projektplan legt Ablauf, Termine, Verantwortlichkeiten, Aufwand und Meilensteine eines Projekts fest.
 
 ## Warum ist das so?
-Ohne Plan fehlen Steuerbarkeit und Transparenz für Stakeholder.
+Ohne Plan sind Ressourcenüberlastung, Terminüberschreitungen und Abstimmungsprobleme fast sicher.
 
 ## Zusammenspiel
-- Zeitstruktur über [[Netzplan, Gannt-Diagramm, Meilenstein]]
-- Personal über [[Ressourcenplanung]]
-- Überwachung über [[Projektcontrolling]]
+Projektplan nutzt Ergebnisse aus [[Netzplan, Gannt-Diagramm, Meilenstein]] und [[Ressourcenplanung]]. Die Steuerung erfolgt über [[Projektcontrolling]].
 
-## Mini-Struktur
-1. Ziele und Scope
-2. Arbeitspakete + Verantwortliche
-3. Termine und Meilensteine
-4. Risiken und Maßnahmen
+## Kernbestandteile
+| Baustein | Inhalt |
+|---|---|
+| Arbeitspakete | klare Aufgabenpakete |
+| Termine | Start, Ende, Puffer |
+| Verantwortliche | RACI/Owner |
+| Risiken | Eintrittswahrscheinlichkeit × Auswirkung |
+| Kommunikationsplan | Wer informiert wen, wann, wie |
 
-## Prüfungsszenario
-"Was passiert bei Scope Creep?" → Änderungsmanagement und Priorisierung notwendig.
+## Beispielaufgabe
+**Aufgabe:** Ein Arbeitspaket verschiebt sich um 5 Tage auf dem kritischen Pfad. Was folgt?  
+**Lösung:** Projektendtermin verschiebt sich um 5 Tage (wenn keine Gegenmaßnahme erfolgt).
+
+## Querverweise
+[[Netzplan, Gannt-Diagramm, Meilenstein]] · [[Projektcontrolling]]
